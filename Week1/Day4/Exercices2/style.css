@@ -1,0 +1,50 @@
+body{
+  background-image: url(startup-594090_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+h1,.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 50px 400px;
+  margin-bottom: 0;
+}
+h1{
+  font-size: 50px;
+  background-color: rgba(226, 225, 225, 0.137);
+}
+button{
+  margin: 10px;
+  margin-top: 0;
+}
+footer{
+  background-color: white;
+}
+#footer{
+  border: 2px solid black;
+  padding: 0 200px;
+}
+p{
+  font-size: 12px;
+  color: blue;
+}
+i{
+ font-size: 40px;
+ color: blue;
+}
+h3{
+  color: blue;
+  margin-top: 20px;
+}
+a{
+  text-decoration: none;
+  color: blue;
+  cursor: pointer;
+}
+#arrow{
+  font-size: 12px;
+}

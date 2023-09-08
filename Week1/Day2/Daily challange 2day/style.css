@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(ИЗУЧЯЕМ\ КОМНАТЫ.png);
+}
+.nav-bar{
+  background-color: #28774F;
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+  
+}
+a {
+  font-size: 23px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: #002513;
+}
+.leftside{
+  position: absolute;
+  right: 30px;
+  margin: 0;
+}
+#section-2{
+  font-size: 30px;
+  position: relative;
+}
+.heading{
+  text-align: center;
+  font-size: 80px;
+  background-color: rgba(255, 255, 255, 0.452);
+  width: 100%;
+  position: absolute;
+  top: 200px;
+}
+p {
+  position: absolute;
+  left: 40px;
+  top: 300px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.452);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px 10px;
+}
+.coosereason {
+  font-size: 80px;
+  text-align: center;
+  background-color: rgba(220, 233, 245, 0.308);
+  margin-top: 200px;
+}
+
+
+@media all and (min-width: 768px){
+  .heading{
+    font-size: 25px;
+  }
+  .nav-bar{
+    background-color: lightgreen;
+    color: black;
+  }
+}
+@media all and (min-width: 600px) {
+  .heading{
+    font-size: 35px;
+  }
+  .nav-bar{
+    background-color: yellow;
+    color: black;
+  }
+  section{
+    position: relative;
+  }
+  p{
+    position: absolute;
+    top: 250px;
+  }
+}
+@media all and (min-width: 992px) {
+  .nav-bar{
+    background-color: red;
+    color: white;
+  }
+  section{
+    position: relative ;
+  }
+  .heading{
+    position: absolute;
+    top: 300px;
+  }
+  p{
+    position: absolute;
+    top: 2px;
+  };
+  
+}
+@media all and (min-width: 1200px) {
+  .nav-bar{
+    background-color: black;
+    color: white;
+  }
+}

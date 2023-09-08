@@ -1,0 +1,29 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+section{
+  width: 50%;
+  height: 600px;
+  display: grid;
+  grid-template-rows: repeat(6 auto);
+  grid-template-columns: auto auto auto auto auto auto;
+  
+}
+.container{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+}
+.br,.or,.lo{
+  border: 2px solid white;
+}
+.or{
+  background-color: rgb(255, 166, 0);
+}
+.lo{
+  background-color: rgb(245, 201, 120);
+}
+.br{
+    background-color: brown;
+}

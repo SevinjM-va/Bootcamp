@@ -1,0 +1,15 @@
+#unique{
+  background-color: pink;
+}
+.second{ 
+  color: blue;
+  font-size: 36px;
+}
+.third {
+  font-size: 24px;
+}
+.fourth{
+  background-color: green;
+  font-size: 24px;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.bg-light{
+  height: 250px;
+  padding: 50px;
+  margin-bottom: 80px;
+}
+.container-sec{
+  display: flex;
+  justify-content: center;
+}
+.container-fluid{
+  display: flex;
+}

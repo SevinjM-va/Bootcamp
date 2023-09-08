@@ -1,0 +1,185 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(42, 77, 110);
+}
+header a {
+  position: relative;
+  margin: 0 20px;
+  text-decoration: none;
+  color: rgb(188, 188, 189);
+  font-size: 20px;
+  font-weight: bold; 
+  font-family: 'Dancing Script', cursive;
+  transition: 0.5s;
+}
+
+header a:hover{
+  color: white;
+  padding: 3px 5px;
+}
+.top-part:hover{
+  cursor: pointer;
+}
+
+.top-part{
+font-weight: bold;
+color: white;
+font-family: 'Dancing Script', cursive;display: block;
+margin-left: auto;
+margin: auto;
+padding-top: 5px;
+text-decoration: none;
+width: 100%;
+}
+a:link{
+  text-decoration: none;
+  background-color: transparent;
+}
+li:hover{
+  background-color: white;
+}
+div{
+  text-align: center;
+}
+.home,.bio,.awardshead,.moreinfo{
+  display:inline-block;
+  margin-right: 30PX;
+  font-size: 20px;
+}
+.head{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 40px;
+
+}
+.headparag{
+  text-align: center;
+  margin: 20px;
+  
+
+}
+.imgHead{
+  width: 300px;
+  height: 220px;
+  display: block;
+  margin-left: auto;
+  margin: auto;
+}
+h4{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
+  padding: 10px 0;
+}
+.imgBio{
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin-left: auto;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+section{
+  background-color: rgb(209, 208, 208);
+  padding: 30px;
+}
+.bioparag{
+ padding: 10px 0;
+  text-align: center; 
+  font-family: 'Montserrat Alternates', sans-serif; 
+ 
+}
+.bioparag{
+  font-size: 5px;
+}
+.biography{
+  font-size: 13px;
+  margin: 0 30px;
+}
+h3{
+  text-align: center;
+}
+aside{
+  background-color: rgb(70, 97, 122);
+  margin: 0;
+  padding: 0;
+
+} 
+.awrd{
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.award-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.award{
+  display: flex;
+  margin: 10px;
+  background-color: rgb(145, 139, 139);
+  width: 200px;
+  height: 80px;
+  border-radius: 30%;
+  box-shadow: 3px 2px 5px 0px;
+  font-size: 13px;
+  text-align: center;
+  align-items: center;
+  padding: 20px 5px;
+  margin-top: 10px;
+  transition: 1s;
+}
+.award1,.award2,.award3,.award4,.award5,.award6{
+  justify-content: center;
+}
+.award:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.awardimg1,.awardimg2,.awardimg3,.awardimg4,.awardimg5,.awardimg6 {
+  width: 40px;
+  height: 40px;
+}
+#section-4{
+  background-color: rgb(42, 77, 110) ;
+  height: 200px;
+  transition: 1.2s;
+}
+.wikipedia,.franklinUnLogo,.califUniLogo{
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  
+}
+#section-4 > div{
+  transition: 1.2s;
+}
+#section-4 > div:hover{
+  transform: scale(1.2);
+}
+.copyright{
+  background-color:rgb(17, 32, 46) ;
+}
+@media screen and (min-width: 1025px){
+  .award{
+    display: block;
+    margin-right: auto;
+    margin: auto;
+  }
+}

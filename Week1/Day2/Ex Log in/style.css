@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 100%;
+  height: 650px;
+  display: flex;
+}
+.log-in{
+  width: 50%;
+  height: 100%;
+  background-color: rgb(231, 229, 229);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+h1{
+  font-size: 50px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+input{
+  font-size: 25px;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(199, 197, 197);
+  font-family:Arial, Helvetica, sans-serif;
+}
+.checkbox{
+  font-size: 18px;
+  padding: 0;
+  margin-top: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+a{
+  margin-left: 20px;
+  font-size: 17px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.button{
+  font-size: 25px;
+  padding: 10px 130px;
+  background-color: blueviolet;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.icon-container{
+  margin: 30px;
+  position: relative;
+}
+
+.hello-friend{
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, black,purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+p{
+  font-family:Arial, Helvetica, sans-serif;
+}
+.icon{
+  width: 30px;
+  height: 20px;
+  margin: 3px;
+  padding: 8px;
+}
+.year{
+  position: absolute;
+  font-size: 13px;
+  color: gray;
+  text-align: center;
+  left: 110px;
+  top: 100px;
+}
+.fa-user-plus{
+  color: white;
+  font-size: 150px;
+  display: flex;
+  
+}
+.hello{
+  color: white;
+}
+.reg-button{
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  color: white;
+
+}
+.per-det{
+  align-items: center;
+  color: white;
+}
+.fa-circle-arrow-right{
+  padding: 1px;
+}
+@media all and (max-width: 840px) {
+  .container{
+    display: block;
+  }
+  .log-in{
+    width: 100%;
+  }
+  .hello-friend{
+    width: 100%;
+  }
+}

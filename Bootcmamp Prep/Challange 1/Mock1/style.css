@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body{
+  width: 90%;
+  margin-left: 10px;
+}
+div, footer{
+  display: inline-block;
+  height: 100px;
+}
+.container{
+  margin: 20px 0;
+  width: 100%;
+}
+.left-pane{
+  width: 35%;
+  background-color: pink;
+  border: 2px solid black;
+  margin-right: 3%;
+}
+.right-pane{
+  width: 60%;
+  background-color:lightblue;
+  border: 2px solid black;
+}
+footer{
+  width: 99%;
+  background-color: yellow;
+}

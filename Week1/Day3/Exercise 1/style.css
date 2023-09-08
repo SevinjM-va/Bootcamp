@@ -1,0 +1,23 @@
+.container{
+  border: 2px solid #ff0000;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+.div1,.div2,.div3{
+  width: 100%;
+  background-color: lightblue;
+  height: 15%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 50px;
+  
+}
+.div2{
+  height: 40%;
+  width: 60%;
+}

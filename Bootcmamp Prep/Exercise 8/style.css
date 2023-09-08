@@ -1,0 +1,36 @@
+body{
+  background-color: rgb(233, 227, 227);
+  border: 3px solid white;
+  font-family: sans-serif;
+}
+.frst{
+  width: 400px;
+  margin: 16px;
+}
+.title{
+  background-color: lightblue;
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 5px solid white;
+}
+.scnd{
+  background-color: lightblue;
+  padding: 12px;
+  border: 5px solid white;
+
+}
+.thrd{
+  background-color: lightblue;
+  text-align: center;
+  padding-bottom: 8px;
+  border: 5px solid white;
+
+}
+button{
+  padding-top: 8px;
+  padding-top: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
