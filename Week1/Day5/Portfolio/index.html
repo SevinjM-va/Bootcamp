@@ -7,14 +7,14 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="css file path here">
+    <link rel="stylesheet" href="css file path here"><!-- unnecessary tag-->
    <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
   </head>
 
 
   <body>
-    <header class="headcont">
+    <header class="headcont"><!-- header hero section ucun uygundur --> <!-- unnecessary tag-->
       <nav class="container">
         <div class="navbar-container1">
           <img class="profilimg" src="Img/SEVINJ.jpg" alt="">
@@ -37,7 +37,9 @@
 
     <section id="left-nav">
       <div class="icon-container">
-        <img class="icon" src="Img/linkedin.svg" alt=""><a href=""></a>
+        <!--  <a>img</a> -->
+        <!-- <a href=""> <img class="icon" src="Img/linkedin.svg" alt=""></a> -->
+       
         <img class="icon" src="Img/twitter.svg" alt=""><a href=""></a>
         <img class="icon" src="Img/youtube.svg" alt=""><a href=""></a>
         <img class="icon" src="Img/github.svg" alt=""><a href=""></a>
@@ -61,7 +63,7 @@
       <div class="gettoknowme-myskills">
         <div class="gettoknowme">
           <h3>Get to know me!</h3>
-            <p class="gettoknowmep">
+            <p class="gettoknowmep"><!-- wrong class name -->
               I'm a <b>Frontend Web Developer</b> building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the <b>Projects<b>
             </p> 
             <p class="gettoknowmep">
@@ -70,12 +72,12 @@
             <p class="gettoknowmep">
               I'm open to <b>Job</b> opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to <b>contact</b> me.
             </p>
-          <button>CONTACT</button>
+          <button>CONTACT</button> <!-- buttonlara ve linklere hover effecti ve cursor: pointer; style elave et -->
         </div>
 
         <div class="myskills">
           <h3>My Skills</h3>
-            <div class="button-container">
+            <div class="button-container"> <!-- ul ve li istifadesi daha uygun -->
               <p class="skills">HTML</p>
               <p class="skills">CSS</p>
               <p class="skills">JavaScript</p>
@@ -145,7 +147,11 @@
 
       <div class="form-container">
         <form action="">
-          <label for="">Name</label>
+          <label for="">Name</label> 
+         <!--  label istifade olundugu zaman -->
+        <!--  <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"> -->
+          
           <input type="text" placeholder="Enter Your Name">
           <label for="">Email</label>
           <input type="email" placeholder="Enter Your Email">
