@@ -175,7 +175,7 @@ typeof(1 != 2)
 
 console.log(5 % 10)
 // Prediction: nothing
-// Actual:
+// Actual: 5
 
 "Java" + "Script"
 // Prediction: JavaScript
