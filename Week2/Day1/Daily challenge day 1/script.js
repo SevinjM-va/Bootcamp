@@ -33,6 +33,6 @@ let fruitFirst = moreFruits[1] ;
 let fruitSecond = fruitFirst[1];
 let fruitString = fruitSecond.toString();
 
-console.log(fruitFirst);
+console.log(fruitFirst);s
 console.log(fruitSecond);
 console.log(fruitString);
