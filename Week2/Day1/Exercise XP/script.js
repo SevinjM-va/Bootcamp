@@ -3,7 +3,7 @@
 // let food = ['dolma','ash','salat','kotlet','xingal','kabab'];
 // let dinner = food[0];
 // console.log(`My favourit dinner food is: ${dinner}`);
-
+// !favorite meal variable missing
 
 
 

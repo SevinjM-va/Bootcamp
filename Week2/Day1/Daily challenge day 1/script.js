@@ -33,6 +33,9 @@ let fruitFirst = moreFruits[1] ;
 let fruitSecond = fruitFirst[1];
 let fruitString = fruitSecond.toString();
 
-console.log(fruitFirst);s
+//! moreFruits[1][1][0] daha elverisli
+
+
+console.log(fruitFirst);
 console.log(fruitSecond);
 console.log(fruitString);
