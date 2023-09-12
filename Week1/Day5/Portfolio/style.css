@@ -55,14 +55,21 @@ a:hover{
   nav{
     font-size: 15px;
   }
+  
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
 nav{
     display: flex;
     flex-direction: column;
   }
   .navbar-container1,.navbar-container2{
     width: 100%;
+  }
+  .namesurname{
+    font-size:13px
+  }
+  .navbar-container1{
+    width: 200pxE;
   }
 }
 main{
