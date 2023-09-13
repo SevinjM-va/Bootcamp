@@ -34,6 +34,8 @@ if (newDog == 'Chihuahua'){
 //   console.log(`${numb} is an odd number`);
 // }
 
+// !!! bonus: numb sifir olarsa deye de sert vere bilersen 
+
 // Ex 4
 
 const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
