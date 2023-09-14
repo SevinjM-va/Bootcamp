@@ -32,12 +32,20 @@ let guestList = {
 console.log('=============================');
 
 // 1. Prompt the student for their name.
-let studentName = prompt('Enter your name!');
+// let studentName = prompt('Enter your name!');
 
-for (let i = 0; i < guestList.length; i++ )
-if (studentName == guestList[i]) {
-  console.log(`Hi! I'm ${studentName}, and I'm from ${item[0]}`)
-}
+// for (let i = 0; i < guestList.length; i++ )
+// if (studentName == guestList[i]) {
+//   console.log(`Hi! I'm ${studentName}, and I'm from ${item[0]}`)
+// }
+
+// !!! correct way
+// !!! gelen propmtun olub olmamasini yoxlayirsan eger varsa console log yoxdursa hemin value undefined falsy value oldugu ucun if e girmir
+// if(guestList[studentName]){
+//     console.log(`Hi! I'm ${studentName}, and I'm from ${guestList[studentName]}`);
+// }
+
+// !!! 
 
 // Ex 3
 let age = [20,5,12,43,98,55];
@@ -46,9 +54,25 @@ let age = [20,5,12,43,98,55];
 let sum = 1;
 for (let i = 0; i < age.length; i++){
   sum = sum * age[i];
-  console.log(sum);
+ 
+  // !!! sum += age[i]; sum dedikce cemi isteyir
+   console.log(sum);
 
 } 
 // 2. Console.log the highest age in the array.
 console.log(sum);
 
+// !!! Correct way
+let maxAge=0
+for (let i = 0; i <age.length; i++) {
+  for(let j = 0; j <age.length-1; j++) {
+ if(age[i]<age[j]) {
+  maxAge = age[j];
+ }else{
+  maxAge = age[i]
+ }
+}
+}
+console.log(maxAge);
+
+// !!! 
