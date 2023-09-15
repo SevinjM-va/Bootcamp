@@ -3,6 +3,7 @@
 
 // Prompt the user for several words (separated by commas).
 let words = prompt('Enter several words,please');
+console.log("🚀 ~ file: script.js:6 ~  words:",  words)
 
 // Put the words into an array.
 let arr = words.split(' ')
@@ -19,6 +20,9 @@ function repeat(arr){
   
   console.log(arr)
   let lengthOfArray = arr.length;
+
+
+
   if (lengthOfArray > remem){
     remem = lengthOfArray; 
     console.log(remem)
@@ -38,6 +42,8 @@ for (let i = 0; i < numberOfStar; i++){
 }
 
 
-
-
-
+// !!! steps
+/* 1. array i loop etdikden donra en boyuk length li sozu tap
+2. en uzun sozun length inin uzerine meselen 4 gel
+3. 2 ci setirden etibaren her bir sozun evveline ve sonuna ulduz yazib console et
+ */

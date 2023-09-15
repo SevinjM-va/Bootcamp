@@ -21,6 +21,8 @@ infoAboutPerson("Josh", 12, "yellow");
 
 // Ex 2
 
+// !!!her defe number() cagirmaq yerine ustde bir defe cagirib variable menimsetmek daha rahat olar
+// !!! let numberBill = Number(bill)
 
 // function calculateTip(){
 //   let bill = prompt('Enter amount of the bill,please!');
@@ -154,46 +156,68 @@ console.log('========================');
 // 4-də problemlidir!!!!
 
 
-// function hotelCost(){
-//   let ask;
-//   do {
-//     ask = prompt(`How many nights would you to star?`);
-//   } while (ask != (/^[0-9.,]+$/)) 
+
+
+function hotelCost(){
+  let ask;
+  let check
+  do {
+    ask = prompt(`How many nights would you to stay?`);
+    let regex = /^[0-9]$/
+    check =regex.test(ask)
+    console.log(check);
+    // !!! prompt her zaman string oturur
+    // !!! regexden istifade etmek ucun test ve ya match mnetodlari ile jkombinasiyada olmalidir
+    // !!! sirf regex sablonu method olmadigi ucun islemir
+    // !!! test ve ya match true ya da false oturur
+  } while (!check); 
   
-//  if {
-//     let totalPrise = ask * 140;
-//     return `The Total Prise is ${totalPrise}`;
-//   } else {
-//     return ask;
-//   }
-  // }
-  // let total = hotelCost()
-  // console.log(total);
+ if(ask) {
+    let totalPrise = ask * 140;
+    return `The Total Prise is ${totalPrise}`;
+  } else {
+    return ask;
+  }
+
+  }
+  let total = hotelCost()
+  console.log(total);
 
 
 // 2
 
-// function planeRideCost(){
+function planeRideCost(){
 
-//   let ask = prompt('Destination,please:')
-//   if (typeof(ask) === 'string'){
-//     if (ask == 'London'){
-//       return`${ask}: $183`
-//     } else if (ask == 'Paris'){
-//       return`${ask}: $220`
-//     } else {
-//       return `All other destination: 300$`
-//     } 
-//   }
-// }
+  let ask = prompt('Destination,please:')
 
-// let end = planeRideCost();
-// console.log(end);
+  // !!! her hansi inputu string ile muqayise etdiyin zaman birinci lowercase() e cevir ki case sensitive problemi yasanmasin
+  if (typeof(ask) === 'string'){
+    if (ask == 'London'){
+      return`${ask}: $183`
+    } else if (ask == 'Paris'){
+      return`${ask}: $220`
+    } else {
+      return `All other destination: 300$`
+    } 
+  }
+}
+
+let end = planeRideCost();
+console.log(end);
 
 // 3
 function rentalCarCost(){
-  let ask = prompt('How many days would you like to rent a car?');
-  if (typeof(ask) == !isNaN ){
+  let askinput = prompt('How many days would you like to rent a car?');
+
+  let ask = Number(askinput)
+
+  // !!! isNaN() methoddu icerisine parametr qebul edir ve false ve ya true oturur
+  // !!! isleme prinspipi hemin metodla qisaca bele olar: input value nu number e cevirirk eger input herfle olarsa number() NaN verer.
+  // !!! hemin number() oturduyunun nan olub olmadigini bilmek ucun isnan islederik
+
+  // !!! typeof bize hemnin parametrin type ni verir prompt birbasa her hansi type cevirmesi etmediyi ucun her zaman string oturecek
+
+  if (!isNaN(ask)){
     if (ask < 10){
       let calcul = ((ask * 40) * 5)/100;
       return calcul;
@@ -216,3 +240,5 @@ function totalVacationCost(){
 }
 let threeOfThem = totalVacationCost();
 console.log(threeOfThem);
+
+
