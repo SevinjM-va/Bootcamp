@@ -1,32 +1,54 @@
 
-const allBooks = [
-  {
+
+// !!!Anlamadıqlarıma videodan baxıb öyrəndim sonra yazdım. Çünki çox şeyi bilmirdim bu tapşırıqda.
+
+const allBooks = []
+  const book1 = {
     title: 'Murder1',
     author: 'K.M.Karl',
     image: 'a url',
-    alreadyRead: 'which is a boolean (true or false)'
+    alreadyRead: 'true'
   }
-,
-  {
+  const book2 = {
     title: 'Harry Potter',
     author: 'JKRolling',
     image: 'a url',
-    alreadyRead: 'which is a boolean (true or false)'
+    alreadyRead: 'true'
   }
-]
+
+  allBooks.push(book1,book2);
+
+  let space = '';
+
+  for (let book of allBooks){
+
+    const rowTable = `
+    <tr>
+    <td>${book.title}</td>
+    <td>${book.author}</td>
+    <td>${book.image}</td>
+    <td>${book.alreadyRead}</td>
+  </tr>`
+  space = space + rowTable;
+  console.log(space);}
 
 const addInsideDiv = document.createElement('Table');
 
 addInsideDiv.innerHTML = `
   <thead>
     <tr>
-      <th> Book list </th>
+      <th>My first book</th>
     </tr>
   </thead>
+  <tbody>
+    ${space}
+</tbody>
 `
 console.log(addInsideDiv);
+
 let htmlDiv = document.querySelector('.listBooks');
-htmlDiv.appendChild(addInsideDiv);
+console.log('htmlDiv:', htmlDiv)
+htmlDiv?.appendChild(addInsideDiv);
+addInsideDiv.appendChild(allBooks)
 
 
-htmlDiv.appendChild(allBooks);
