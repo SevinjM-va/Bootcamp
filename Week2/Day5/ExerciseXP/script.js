@@ -10,14 +10,18 @@ function playTheGame(){
     return
   } else if (game) {
 
-    let question = window.prompt('Enter a number between 0 and 10!');
+    let question = prompt('Enter a number between 0 and 10!');
+    // !!! window global object oldugu ucun ixtisar etsek da olar
+
+
      
     if (!isonlyNumbers(question)){
       alert('Sorry Not a number, Goodbye');
       return
     } else if (!num0and10(Number(question))){
+      /* !!! function adlarini fel kimi qoymaq daha anlasilir edir yeni adinda ne ne etdiyini bilinsin qisaca*/
       alert('Sorry it’s not a good number, Goodbye');
-      return
+      return;
     } else {
       let computerNumber = randomNumber();
       console.log(`ComputerNumber is: ${computerNumber}`);
@@ -58,5 +62,5 @@ function compareNumbers(userNumber,computerNumber){
   }
   } 
 }
-compareNumbers(7, 8);
+// compareNumbers(7, 8);
 
