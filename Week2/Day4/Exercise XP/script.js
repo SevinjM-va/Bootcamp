@@ -154,23 +154,26 @@ console.log('========================');
 // 4-də problemlidir!!!!
 
 
-// function hotelCost(){
-//   let ask;
-//   do {
-//     ask = prompt(`How many nights would you to star?`);
-//   } while (ask != (/^[0-9.,]+$/)) 
-  
+function hotelCost(){
+  let ask;
+  do {
+    ask = prompt(`How many nights would you to star?`);
+  } while (!isOnlyNumbers() || ask === undefined); 
+  console.log(hotelCost());
 //  if {
 //     let totalPrise = ask * 140;
 //     return `The Total Prise is ${totalPrise}`;
 //   } else {
 //     return ask;
 //   }
-  // }
+  }
   // let total = hotelCost()
   // console.log(total);
 
 
+  function isOnlyNumbers (str){
+    let regex = (RegExp(/^[0-9]*$/))
+  }
 // 2
 
 // function planeRideCost(){
@@ -191,28 +194,28 @@ console.log('========================');
 // console.log(end);
 
 // 3
-function rentalCarCost(){
-  let ask = prompt('How many days would you like to rent a car?');
-  if (typeof(ask) == !isNaN ){
-    if (ask < 10){
-      let calcul = ((ask * 40) * 5)/100;
-      return calcul;
-    } else {
-      let calcul = ask * 40;
-      return calcul;
-    }
+// function rentalCarCost(){
+//   let ask = prompt('How many days would you like to rent a car?');
+//   if (typeof(ask) == !isNaN ){
+//     if (ask < 10){
+//       let calcul = ((ask * 40) * 5)/100;
+//       return calcul;
+//     } else {
+//       let calcul = ask * 40;
+//       return calcul;
+//     }
    
-  } 
-}
-let total1 = rentalCarCost();
-console.log(`Total amount is: ${total1}`)
+//   } 
+// }
+// let total1 = rentalCarCost();
+// console.log(`Total amount is: ${total1}`)
 
 
 
 
-// 4
-function totalVacationCost(){
-  return `The car cost: ${total}, the hotel cost: ${end} , the plane tickets cost ${total1}`;
-}
-let threeOfThem = totalVacationCost();
-console.log(threeOfThem);
+// // 4
+// function totalVacationCost(){
+//   return `The car cost: ${total}, the hotel cost: ${end} , the plane tickets cost ${total1}`;
+// }
+// let threeOfThem = totalVacationCost();
+// console.log(threeOfThem);
