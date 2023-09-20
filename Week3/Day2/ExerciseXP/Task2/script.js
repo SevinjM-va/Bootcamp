@@ -2,12 +2,14 @@
 
 // Ex 2
 // 1. Retrieve the form and console.log it.
-// let form = document.getElementsByTagName('form');
-// console.log(form);
+let form = document.getElementsByTagName('form');
+console.log(form);
+
+/* !!! array oturduyu ucun index qeyd olunmalidi */
 
 // // 2.Retrieve the inputs by their id and console.log them.
-// let nameInput = document.querySelector('[name=firstname]').value;
-// console.log(nameInput);
+let nameInput = document.querySelector('[name=firstname]');
+console.log(nameInput);
 
 // 4. When the user submits the form (ie. submit event listener)
 // use event.preventDefault(), why ?
