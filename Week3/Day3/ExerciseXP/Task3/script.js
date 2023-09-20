@@ -4,8 +4,6 @@ const yellowbox = document.getElementById('target');
 const redbox = document.getElementById('box');
 
 
-
-
 function start(){
   console.log();
 }
