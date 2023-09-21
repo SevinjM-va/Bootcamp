@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  border: 5px solid rgb(175, 173, 173);
+  display: flex;
+  height: 424px;
+}
+
+.palitra{
+  display: block;
+  width: 20%;
+  height: 420px;
+  background-color: rgb(175, 173, 173);
+}
+.clearDiv{
+  background-color: rgb(175, 173, 173);
+  height: 15%;
+  display: flex;
+  justify-content: center;
+ 
+}
+button{
+  padding: 15px 68px;
+  display: block;
+  margin-right: auto;
+  margin: auto;
+  border-radius: 7px;
+  border: 1px solid black;
+}
+.colours{
+  display: grid;
+  background-color: rgb(175, 173, 173);
+  width: 97%;
+  height: 85%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  
+}
+
+.col{
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.paper{
+  display: flex;
+  width: 80%;
+ display: grid;
+ grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+ grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+.smallbox{
+  border: 1px solid rgb(185, 184, 184);
+}
