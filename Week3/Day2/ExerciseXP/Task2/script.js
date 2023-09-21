@@ -24,6 +24,7 @@ let submit = document.getElementById('submit');
 
 submit.addEventListener('click', saveDate)
 
+
 function saveDate(event){
   let firstname = document.querySelector('[name=firstname]').value;
   console.log(firstname)
@@ -33,12 +34,13 @@ function saveDate(event){
   if (firstname === '' || lastname === ''){
     alert('Enter your firstname or lastname,please!!!');
   } else {
-    let ul = document.querySelector('usersAnswer');
+    let ul = document.querySelector('.usersAnswer');
     let li1 = document.createElement('li');
     let li2 = document.createElement('li');
     li1.innerText = (firstname);
     li2.innerText = (lastname);
-     ul.append(li1, li2);
+    ul.append(li1, li2);
+    
   }
 }
 
