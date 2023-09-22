@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Game</title>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="palitra">
+    <div class="clearDiv">
+      <button id="btn" onclick="clearGameboard()">Clear</button>
+    </div>
+
+    <div class="colours">
+      <div class="col col-red" style="background-color: red;"></div>
+
+      <div class="col col-lightred" style="background-color: rgb(250, 125, 125)";></div>
+
+      <div class="col orange" style="background-color: orange;"
+      ></div>
+
+      <div class="col yellow"style="background-color: yellow;"
+     ></div>
+
+      <div class="col lightgreen"
+      style="background-color: rgb(33, 243, 33);"></div>
+      
+      <div class="col llgreen" style="background-color: rgb(68, 214, 117);"></div>
+
+      <div class="col green1" style="background-color: green"
+      ></div>
+
+      <div class="col green2" style="background-color: rgb(23, 211, 224)" ></div>
+
+      <div class="col green3" style="background-color: rgb(109, 225, 230);"
+      ></div>
+      
+      <div class="col blue1" style="background-color: rgb(179, 203, 223)"></div>
+
+      <div class="col blue2" style="background-color: rgb(13, 86, 197)" ></div>
+
+      <div class="col blue3" style="background-color: blue"
+      ></div>
+
+      <div class="col blue4"  style="background-color: rgb(1, 1, 155)"
+      ></div>
+
+      <div class="col purple" style="background-color: rgb(78, 0, 78)"
+      ></div>
+
+      <div class="col violet" style="background-color: purple"
+      ></div>
+
+      <div class="col pink" style="background-color: violet"
+      ></div>
+
+      <div class="col lightpink" style="background-color: pink"
+      ></div>
+
+      <div class="col lightgray" style="background-color: rgb(207, 206, 206)"></div>
+
+      <div class="col gray" style="background-color: gray" ></div>
+      <div class="col black" style="background-color: black" ></div>
+      <div class="col white" style="background-color: white" ></div>
+      
+    </div>
+  </div>
+
+  <div class="paper">
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+    <div class="smallbox"></div>
+
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
