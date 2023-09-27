@@ -17,15 +17,8 @@ console.log(...getCarHonda);
 
 // Part 2
 
+
 let sortCarInventoryByYear = inventory.sort((a, b) => {return a['car_year'] - b['car_year']});
 
 console.log(sortCarInventoryByYear);
 
-// let yearsinArr = [];
-// let sortCarInventoryByYear = inventory.forEach((carInventory) =>{
-//   let years = carInventory;
-//   console.log(years)
-//   yearsinArr.push(years);
-// });
-// let ascendingYear = yearsinArr.sort(function (a,b){return a-b});
-// console.log(ascendingYear);
