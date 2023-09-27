@@ -40,7 +40,7 @@ const addToTen = addTo(10);
 
 addToTen(3);
 
- console.log(addToTen);
+ console.log(addToTen(3));
 
 
 //  Ex 3
@@ -48,13 +48,13 @@ addToTen(3);
 
 const curriedSum = (a) => (b) => a + b;
 curriedSum(30)
-console.log(curriedSum);
+console.log(curriedSum(30)(1));
 
-// Burada curriedSumin parametri nə üçün a funkiyasına verilmir?
+
 
 // Ex 4
 
-const compose = (f, g) => (a) => f(g(a)); 
+const compose = (f, g) => (a) => f(11); 
 const add1 = (num) => num + 1; //11
 const add5 = (num) => num + 5; //15
 compose(add1, add5)(10)
