@@ -15,16 +15,24 @@ const weight = (kq)=> {
 };
 console.log(weight(5)())
 
+// !!! function expression-- function name (){return 'something'}
+// !!! function declaration-- let name = function(){return 'something'}
+
 
 // Ex 3
 const fortuneTeller = (numberchildren,partnerName,geographicLoc,jobTitle)=>{
-  return (`"You will be a ${jobTitle} in ${geographicLoc}, and married to ${partnerName} with ${numberchildren} kids.`);
+  let p = document.querySelector('p');
+  let total = `"You will be a ${jobTitle} in ${geographicLoc}, and married to ${partnerName} with ${numberchildren} kids.`
+  p.innerHTML = total;
+  return;
 }
-let total = fortuneTeller(2,"Ali ","Baku ","teacher ")
-console.log(total);
+fortuneTeller(2,"Ali ","Baku ","teacher ")
+// console.log(total);
 
-let p = document.querySelector('p');
-p.innerHTML = (total);
+/* let p = document.querySelector('p');
+p.innerHTML = (total); */
+// !!! metodologiya functionun icerisinde olmali bele olan halda function cagrildigi zaman ise dusur ancaq
+// !!! globalda yazildigi halda ise function call edilmese bele ise gereksiz ise duse biler
 
 
 

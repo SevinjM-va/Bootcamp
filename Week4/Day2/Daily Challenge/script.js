@@ -26,8 +26,18 @@ displayGroceries();
 const cloneGroceries =()=>{
   let user = client;
   let shopping = groceries;
-  return shopping;
 
+  // !!! groceries variable-in value-su array oldugu ucun object reference olunur.
+  // !!! bu zaman shopping array-in value-su hemin deyerin ramda yerlesdiyi yer yazilir
+  // !!! her iki variable eyni obyekti gosterir
+  // !!! shopping uzerinde edilen deyisiklikler eyni 1  ortaq deyer oldugu ucun her iki variable gosterecek
+
+  shopping.totalPrice = '35$';
+  shopping.other.paid = false;
+  console.log(shopping);
+  console.log(groceries); 
+  // !!!
+  return shopping;
 }
 console.log(cloneGroceries());
 
