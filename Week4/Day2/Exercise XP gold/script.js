@@ -36,7 +36,7 @@ let landscape = () => {
 
 //  EX 2
 const addTo = x => y => x + y;
-const addToTen = addTo(10);
+const addToTen = addTo(10)(3);
 
 addToTen(3);
 
