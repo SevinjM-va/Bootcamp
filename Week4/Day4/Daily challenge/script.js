@@ -1,15 +1,22 @@
 
 
 class Video {
+
+
   constructor(title, uploader, time){
     this.title = title;
     this.uploader = uploader;
     this.time =  time;
   }
+
   watch() {
     return `${this.uploader} parameter watched all ${this.time} parameter of ${this.title} parameter!`
   }
 }
+
+
+const harryVideo = new Video("Harry Potter","John", '20');
+console.log(harryVideo);
 
 const videos = [
   {
@@ -42,14 +49,14 @@ let title;
 let uploader;
 let time;
 
-
-
 let x = videos.map((el)=>{
   title = el.title;
   uploader = el.uploader;
   time = el.time;
-  return new Video(time,uploader,time);
+  return new Video(title,uploader,time);
 })
+
+console.log(x)
 
 x.forEach((el)=>{
 console.log(el.watch());
