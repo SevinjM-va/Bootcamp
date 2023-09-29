@@ -48,6 +48,9 @@ let x = videos.map((el)=>{
   title = el.title;
   uploader = el.uploader;
   time = el.time;
+
+  // !!! birbasa functionun icerisinde yaratsaq daha uygun olar
+  // !!! functiona aid olan variable larin bir yerde olmasi daha uygundur
   return new Video(time,uploader,time);
 })
 

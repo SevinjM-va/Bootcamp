@@ -14,5 +14,10 @@ let keysAndValues = (key, value)=>{
   console.log(sort(key))
   console.log(value)
 }
-// console.log
-(keysAndValues({a: 2, b: 5, c: 9}));
+
+// !!! object metodlarindan istifade edirik burada meselen entries keys values ve s.
+// !!! object.enties()
+// !!! daha sonra onu sort ede bilerik 
+// !!! function da parametr kimi onjecti goturmelidi 
+
+ console.log(keysAndValues({a: 2, b: 5, c: 9}));
