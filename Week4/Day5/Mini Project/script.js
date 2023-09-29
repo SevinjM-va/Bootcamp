@@ -96,7 +96,8 @@ document.getElementById('container').appendChild(div);
 const search = (e)=>{
   console.log(e.target.value)  
   let found = robots.filter(robot => robot.name.includes(e.target.value));
-  deletCards(found)
+
+  deletCards(found);
   displayCards(found)
 }
 
