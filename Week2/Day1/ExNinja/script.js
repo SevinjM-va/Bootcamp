@@ -34,15 +34,17 @@ if (showPlaceNemo >= 0){
 
 let nuM = prompt('Enter your number,please!');
 
-if (nuM < 2){
+let o = 'o'
+if (nuM <= 2){
   console.log('boom');
 } else if (nuM >= 2){
-  console.log(`There are ${nuM.keyup('o')} s `)
+  console.log(`B${o.repeat(nuM)}m`)
   if (nuM %2 === 0 ){
-    console.log(`${nuM}!!!`)
+    console.log(`B${o.repeat(nuM)}m!`)
   }else if (nuM%5 === 0){
-    console.log(nuM);
+    console.log(`B${o.repeat(nuM).toUpperCase(nuM)}M`);
   } else if (nuM %2 === 0 && nuM %5 === 0){
-    console.log('Horray');
+    console.log(`B${o.repeat(nuM).toUpperCase(nuM)}M!`);
   }
 } 
+
