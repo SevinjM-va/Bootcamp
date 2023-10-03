@@ -46,18 +46,20 @@ if (grade > 90){
 
 // // Ex 3
 
-// let verb = prompt('Enter the verb: ');
+let verb = prompt('Enter the verb: ');
 
-// let convertverb = verb.toLowerCase();
+let convertverb = verb.toLowerCase();
 
-// let search = convertverb.endsWith('ing');
+let search = convertverb.endsWith('ing');
 
 
-// if (verb.length >= 3 && !search ) {
-//   console.log(`${verb}ing`)
-// } 
-// else if ( verb.length >= 3 && search){
-//   console.log(`${verb}ly`)
-// } else {
-//   console.log(verb);
-// }
+if (verb.length >= 3 && !search ) {
+  console.log(`${verb}ing`)
+} 
+else if ( verb.length >= 3 && search){
+  console.log(`${verb}ly`)
+} else {
+  console.log(verb);
+}
+
+// !!! checked

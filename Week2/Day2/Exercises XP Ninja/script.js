@@ -1,5 +1,5 @@
 
-// Ex 1
+// // Ex 1
 
 // let yearMaria = 1990;
 // let yearKate = 1976;
@@ -27,10 +27,14 @@
 
 // Ex 2
 
+
 let zipCode = Number(window.prompt('Enter your zip code, please!'));
 console.log(zipCode);
-if ( zipCode === RegExp('^[0-9]$') && ()){
+if ( zipCode !== RegExp('^[0-9]$')){
   alert ('Error')
 } else {
   alert ('Success')
 }
+
+
+// Ex 3
