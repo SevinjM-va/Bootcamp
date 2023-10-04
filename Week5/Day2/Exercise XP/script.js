@@ -6,7 +6,6 @@ x.open('GET', 'https://api.giphy.com/v1/gifs/search?q=sun&rating=g&limit=10&offs
 x.responseType = 'json';
 x.send();
 
-
 x.onload = function(){
 
 if (x.status != 200){
