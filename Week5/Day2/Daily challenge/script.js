@@ -1,53 +1,51 @@
-
-
 const form = document.querySelector('form');
 const category = document.querySelector('input');
 const imgDiv = document.querySelector('.imgDiv');
-const img = document.createElement('img');
+// const img = document.createElement('img');
 
-
-
-
-
-const getSubmit =(e)=>{
+const getSubmit = (e) => {
   e.preventDefault();
   const val = category.value;
   fetchGif(val);
-}
+};
 
+const fetchGif = (category) => {
+  let xhr = new XMLHttpRequest();
+  xhr.open(
+    'GET',
+    `https://api.giphy.com/v1/gifs/search?q=${category}&rating=g&limit=10&offset=2&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
+  );
+  xhr.send();
+  xhr.responseType = 'json';
 
-const fetchGif = (category)=>{
+  xhr.onload = function () {
+    if (xhr.status != 200) {
+      console.log('Something went wrong');
+    } else {
+      console.log(xhr.response.data);
 
-let xhr = new XMLHttpRequest();
-xhr.open('GET', `https://api.giphy.com/v1/gifs/search?q=${category}&rating=g&limit=10&offset=2&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`);
-xhr.send();
-xhr.responseType = 'json';
+      /*   img.src = xhr.response.data;  */ /* bura umumi object Array i dusur */
+      // !!! hemin arrayin icerisinden img src olan irl e path vermeliyik
+      // !!! ve array oldugu ucun map olmalidir
+      // !!! her defesinde yeni img yaradib ona src vermeliyik
 
-xhr.onload = function(){
-  if (xhr.status != 200){
-    console.log('Something went wrong');
-  } else{
+      const data = xhr.response.data;
+      data?.map((item) => {
+        const img = document.createElement('img');
+        img.src = item.images.original.url;
+        console.log(img);
+        imgDiv.appendChild(img);
+        document.body.appendChild(imgDiv);
+        console.log(imgDiv);
+        const button = document.createElement('div');
+        button.textContent = 'Click me';
+        imgDiv.appendChild(button);
+      });
+    }
+  };
 
-    console.log(xhr.response.data)
-
-    img.src = xhr.response.data;
-    console.log(img)
-    imgDiv.appendChild(img);
-    document.body.appendChild(imgDiv);
-    console.log(imgDiv)
-    const button = document.createElement('div');
-    button.textContent = 'Click me';
-    imgDiv.appendChild(button);
-  }
-}
-
-xhr.onerror = function(){
-  alarm('failed')
-}
-
-}
+  xhr.onerror = function () {
+    alarm('failed');
+  };
+};
 form.addEventListener('submit', getSubmit);
-
-
-
-
