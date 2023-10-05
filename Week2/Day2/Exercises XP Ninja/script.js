@@ -28,13 +28,23 @@
 // Ex 2
 
 
-let zipCode = Number(window.prompt('Enter your zip code, please!'));
-console.log(zipCode);
-if ( zipCode !== RegExp('^[0-9]$')){
-  alert ('Error')
-} else {
-  alert ('Success')
-}
+// let zipCode = Number(window.prompt('Enter your zip code, please!'));
+// console.log(zipCode);
+// if ( zipCode !== RegExp('^[0-9]$')){
+//   alert ('Error')
+// } else {
+//   alert ('Success')
+// }
 
 
 // Ex 3
+
+let word = prompt('Enter the word, please');
+
+function a (){
+
+  let removeVovels = word.replace(/[aeiouAEIOU]/g, '')
+  console.log(removeVovels);
+}
+
+  a();
