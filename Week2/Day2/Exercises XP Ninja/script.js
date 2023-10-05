@@ -43,8 +43,17 @@ let word = prompt('Enter the word, please');
 
 function a (){
 
-  let removeVovels = word.replace(/[aeiouAEIOU]/g, '')
+  let removeVovels = word.replace(/[aeiouAEIOU]/g,'')
+  
   console.log(removeVovels);
+
+  let numbers = {'a': 1, 'e': 2, 'i': 3, 'o': 4, 'u': 5};
+  
+  //  ! BURDA NƏ SƏHV VAR Kİ İŞLƏMİR?
+  let replaceVovels = word.replace(/[aeiouAEIOU]/g, (match) => numbers);
+
+
+  console.log(replaceVovels);
 }
 
   a();
