@@ -47,3 +47,7 @@ const y = new Promise((resolve, reject)=>{
     reject('error');
   }
 }).then(result => console.log(result)).catch(result => console.log(result));
+
+// !!! OPTION 2
+ let resolveWoked = Promise.resolve(3);
+ let rejectWoked = Promise.reject('boo');

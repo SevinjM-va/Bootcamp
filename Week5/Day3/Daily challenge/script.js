@@ -1,6 +1,3 @@
-
-
-
 // const makeAllCaps = (arr)=>{
 //   return new Promise ((resolve, reject)=>{
 //     const check = arr.every(x => typeof(x) === 'string');
@@ -23,13 +20,12 @@
 //   })
 // }
 
-
 // makeAllCaps(["apple", "pear", "banana", "melon", "kiwi"])
 // .then(arr => sortWords(arr))
 // .then(result => console.log(result))
 // .catch(error => console.log(error));
 
-const morse = {
+const morse = `{
   "0": "-----",
   "1": ".----",
   "2": "..---",
@@ -75,48 +71,60 @@ const morse = {
   "@": ".--.-.",
   "(": "-.--.",
   ")": "-.--.-"
-};
-const toJs =()=>{
-  const convert = JSON.stringify(morse);
-  return new Promise((resolve, reject)=>{
-    if(Object.keys(convert) === 0){
-      reject ('The Object is empty!')
+}`;
+
+const convert = JSON.parse(morse);
+
+const toJs = () => {
+  return new Promise((resolve, reject) => {
+    if (Object.keys(convert) === 0) {
+      reject('The Object is empty!');
     } else {
-      resolve (convert);
+      resolve(convert);
     }
-  })
-};
-
-
-const toMorse = (morseJS)=>{
-
-  return new Promise((resolve, reject)=>{
-
-    let letter = morseJS.trim().split(''); 
-    console.log(letter);
-    
-    for(let lett of letter){
-    let check= Object.keys(morse).find(item=>item.includes(lett));
-
-    if (check){
-     const keys = Object.keys(morse);
-     const filterKey = keys.filter(item => item.includes([check])); 
-     const morseLetter = morse[filterKey];
-     console.log(([morseLetter].splice(' ')))
-
-     let p = document.createElement('p');
-     p.appendChild(morseLetter);
-     document.querySelector('body').appendChild(p);
-     resolve ([morseLetter].splice(' '));
-    } else {
-      reject('The item is not exist in object')
-    };
-  };
   });
 };
 
-toJs()
-.then(result=>console.log(result));
+const toMorse = (morseJS) => {
+  console.log('🚀 ~ file: script.js:89 ~ toMorse ~ morseJS:', morseJS);
+  return new Promise((resolve, reject) => {
+    let word = 'food';
+    let letters = word.trim().split('');
+    console.log(letters);
 
-toMorse('good')
-.then(result => console.log(result));
+    let morseArr = letters.map((val) => {
+    if(morseJS[val]){
+      return morseJS[val];
+    }
+    });
+
+    resolve(morseArr);
+
+    // for (let lett of letter) {
+    //   let check = Object.keys(morse).find((item) => item.includes(lett));
+
+    //   if (check) {
+    //     const keys = Object.keys(morse);
+    //     const filterKey = keys.filter((item) => item.includes([check]));
+    //     const morseLetter = morse[filterKey];
+    //     console.log([morseLetter].splice(' '));
+
+    //     let p = document.createElement('p');
+    //     p.appendChild(morseLetter);
+    //     document.querySelector('body').appendChild(p);
+    // resolve([morseLetter].splice(' '));
+    // } else {
+    //   reject('The item is not exist in object');
+    // }
+    // }
+  });
+};
+
+// toJs().then((result) => console.log(result));
+
+// toMorse('good').then((result) => console.log(result));
+
+toJs()
+  .then((result) => toMorse(result))
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
