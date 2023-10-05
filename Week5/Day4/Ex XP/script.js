@@ -13,6 +13,8 @@ async function a (){
 a();
 
 
+
+
 // Ex 2
 function resolveAfter2Seconds() {
   return new Promise(resolve => {
