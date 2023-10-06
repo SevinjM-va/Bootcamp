@@ -16,7 +16,15 @@
 
 // }));
 
+// !!! try catchden istifade dedikde bu sekilde 
 
+try {
+  // fetch code with await
+} catch (error) {
+  // console.log(error)
+}
+
+// !!!
 
 // console.log('users', users);
 // console.log('posta', posts);
