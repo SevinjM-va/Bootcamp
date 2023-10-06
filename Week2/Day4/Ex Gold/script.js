@@ -22,8 +22,27 @@ console.log(abbrevName("   Robin Singh")); // --> "Robin S."
 
 // Ex 3
 
-const swap = (arg)=>{
-console.log()
-}
+// const swap = (arg)=>{
 
-console.log(swap('The Quick Brown Fox'));
+// let a = arg;
+
+// if(a.toUpperCase() === letter){
+//   console.log(a, 'defined')
+// }
+// console.log('tapilmadi')
+
+// }
+
+// console.log(swap('The Quick Brown Fox'));
+
+
+
+
+// Ex 4
+
+const a = [[3, 4], [8, 3, 2], [3], [9, 3], [5, 3], [4, 3]];
+
+const b = ()=>{
+  const b = Object.find()
+}
+console.log()
