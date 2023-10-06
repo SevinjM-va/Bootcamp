@@ -3,9 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DC</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-image: url(ИЗУЧЯЕМ\ КОМНАТЫ.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 620px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container{
+      height: 500px;
+      width: 500px;
+      background-color: rgba(0, 0, 218, 0.432);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      box-shadow: 0 0 5px 1.2px black;
+    }
+    h1{
+      font-size: 50px;
+    }
+    label{
+      font-size: 25px;
+      padding: 10px 0;
+    }
+    input {
+      padding: 5px;
+      border-radius: 10px;
+    }
+    select{
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    #showResult{
+      padding: 15px 120px;
+      margin: 20px 0;
+      background-color: rgba(0, 0, 107, 0.596);
+      box-shadow: 5 0 0px 1.2px black;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+  
+  </style>
 </head>
 <body>
+
+
+  <div class="container">
+      <h1>Currency Converter</h1>
+      <label for="">From:</label><br>
+      <select name="select1" id="select1"></select><br>
+
+      <label for="">To:</label><br>
+      <select name="select2" id="select2"></select><br>
+
+      <label for="">Amount</label><br>
+      <div>
+        <input type="text" id="amount">
+        <input type="submit" value="Convert" id="submit">
+      </div>
+      <div id="showResult"></div>
+  </div>
   
   <script src="script.js"></script>
 </body>

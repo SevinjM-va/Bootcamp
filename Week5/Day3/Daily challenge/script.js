@@ -1,33 +1,33 @@
 
 
 
-// const makeAllCaps = (arr)=>{
-//   return new Promise ((resolve, reject)=>{
-//     const check = arr.every(x => typeof(x) === 'string');
-//       if (check){
-//        const upperCase = arr.map(x => x.toUpperCase());
-//        resolve (upperCase);
-//       } else {
-//         reject('They are not string');
-//       }
-//    })
-//   }
+const makeAllCaps = (arr)=>{
+  return new Promise ((resolve, reject)=>{
+    const check = arr.every(x => typeof(x) === 'string');
+      if (check){
+       const upperCase = arr.map(x => x.toUpperCase());
+       resolve (upperCase);
+      } else {
+        reject('They are not string');
+      }
+   })
+  }
 
-// const sortWords = (arr) =>{
-//   return new Promise ((resolve, reject)=>{
-//     if (arr.length > 4){
-//       resolve (arr.sort());
-//     } else{
-//       reject('The words have not uppercased')
-//     }
-//   })
-// }
+const sortWords = (arr) =>{
+  return new Promise ((resolve, reject)=>{
+    if (arr.length > 4){
+      resolve (arr.sort());
+    } else{
+      reject('The words have not uppercased')
+    }
+  })
+}
 
 
-// makeAllCaps(["apple", "pear", "banana", "melon", "kiwi"])
-// .then(arr => sortWords(arr))
-// .then(result => console.log(result))
-// .catch(error => console.log(error));
+makeAllCaps(["apple", "pear", "banana", "melon", "kiwi"])
+.then(arr => sortWords(arr))
+.then(result => console.log(result))
+.catch(error => console.log(error));
 
 const morse = {
   "0": "-----",
