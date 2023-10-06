@@ -85,6 +85,7 @@ const toJs = () => {
   });
 };
 
+
 const toMorse = (morseJS) => {
   console.log('🚀 ~ file: script.js:89 ~ toMorse ~ morseJS:', morseJS);
   return new Promise((resolve, reject) => {
@@ -97,6 +98,7 @@ const toMorse = (morseJS) => {
       return morseJS[val];
     }
     });
+    
 
     resolve(morseArr);
 

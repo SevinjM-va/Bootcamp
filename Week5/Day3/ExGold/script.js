@@ -17,11 +17,13 @@ function fetch (url){
     xhr.responseType = 'json';
     xhr.send();
     xhr.onload = () => {
-      console.log(xhr.response.result);
+      console.log(xhr.response.result.properties);
     };
 }
 
 Promise.all(urls).then((allUrls=>{
+ 
+
   allUrls.map((url) => fetch(url))
  
 })).catch(err=>console.log(err));
