@@ -59,7 +59,6 @@ try {
 //   });
 // };
 
-// //The Promise.all() method returns a single Promise that fulfills when all of the promises passed as an iterable have been fulfilled.
 
 // let concurrentPromise = function () {
 //   console.log('==CONCURRENT START with Promise.all==');

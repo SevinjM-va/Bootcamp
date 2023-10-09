@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>PokemonGame</title>
+  <style>
+
+      body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      #screen{
+        width: 290px;
+        height: 215px;
+        border: 2px solid black;
+        position: absolute;
+        bottom: 370px;
+        left: 541px;
+        border-radius: 10px;
+      }
+      #info{
+        width: 290px;
+        height: 215px;
+        border: 2px solid black;
+        position: absolute;
+        bottom: 50px;
+        left: 542px;
+        border-radius: 10px;
+      }
+
+      #screenImg{
+        height: 200px;
+        width: 300px;
+      }
+      #screen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .fa-solid{
+        visibility: hidden;
+        font-size: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      h2{
+        text-align: center;
+        font-size: 30px;
+      }
+      p{
+        text-align: center;
+        font-size: 20px;
+        line-height: 15px;
+      }
+    #container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 647px;
+    }
+    #mini-container{
+      position: absolute;
+      bottom: 148px;
+      left: 394px;
+    }
+    #left{
+      margin: 13px;
+      padding: 11px 20px;
+      background-color: gray;
+    }
+    #right{
+      padding: 11px 20px;
+      background-color: gray;
+    }
+    #round{
+      position: absolute;
+      padding: 35px 35px;
+      border-radius: 50%;
+      background-color: rgba(128, 128, 128, 0.205);
+      bottom: -11px;
+      left: 570px;
+    }
+    #logo-img{
+      width: 70%;
+      height: 100%;
+      display: flex;
+      padding: 20px;
+      
+    }
+    #display{
+      width: 100%;
+      height: 93%;
+      display: flex;
+    }
+    #instr{
+      padding-top: 50px;
+    }
+   
+  </style>
+</head>
+<body>
+  
+  <div id="container">
+    
+    <div id="display" >
+      <div id="logo-img">
+      <img id="logo" class="logo" src="logo.png" alt="" style="height: 150px; width: 250px;">
+      <img class="pokedex" src="pokedex.png" alt="" >
+    </div>
+    <div id="instr">
+      <h1>How to use:</h1>
+      <p>1- Press the <strong>green</strong> button to get a random Pokémon</p>
+      <p>2- Press the <strong>left</strong> and <strong>right</strong> buttons to see previous and next Pokémon.</p>
+    </div>
+    </div>
+
+    <div id="screen">
+      <img id="screenImg" src="" alt="">
+    </div>
+
+    <div id="info">
+      <h2></h2>
+      <p id="degree"></p>
+      <p id="height"></p>
+      <p id="weight"></p>
+      <p id="type"></p>
+      <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+
+    <div id="mini-container">
+      <button id="left"></button>
+      <button id="right"></button>
+      <button id="round"></button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
