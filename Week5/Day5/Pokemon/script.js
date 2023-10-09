@@ -58,6 +58,11 @@ async function pokemon(num){
   const fet = await fetch ('https://pokeapi.co/api/v2/pokemon');
   const changeJson = await fet.json();
   const data = changeJson.results[num];
+  try {
+    
+  } catch (error) {
+    alert('ops')
+  }
   // console.log(data)
   return details(data);
 }
