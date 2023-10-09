@@ -22,9 +22,14 @@ let num;
   return num;
 }
 function previous(){
-  num++;
-  console.log(num);
-  pokemon(num)
+  if (num > 0 && num < 21){
+    num++;
+    console.log(num);
+    pokemon(num)
+  } else {
+    alert('Oh no! That Pokemon is not available…')
+  }
+ 
 }
 
 function next(){
