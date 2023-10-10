@@ -23,7 +23,7 @@ select * from items;
 -- 2.
 select * from items where item_price > 80;
 -- 3.
-select * from items where item_price >= 300;
+select * from items where item_price >= 300; /* <=  below*/
 -- 4.
 select * from customers where last_name = 'Smith';
 -- 5.
