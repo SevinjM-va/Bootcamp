@@ -35,7 +35,7 @@ select * from address;
 select address,phone from address where district = 'Texas';
 
 -- 7.
-select * from film where film_id between '15' and '150'; 
+select * from film where film_id between '15' and '150';  /* either 15 or 150 --OR */
 
 -- 8.
 select * from film
@@ -60,9 +60,9 @@ select * from payment
 select payment.customer_id, first_name,last_name, amount, payment_date
 from customer
 inner join payment
-on payment.customer_id
+on payment.customer_id /* = customer.customer_id  */
 
-
+/*!!! order by customer.customer_id ASC */
 -- 13
 select * from inventory
 select * from film
