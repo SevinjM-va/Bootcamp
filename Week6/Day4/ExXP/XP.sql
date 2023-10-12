@@ -112,6 +112,5 @@ on employees.job_id = jobs.job_id;
 
 -- 8.
 select * from employees
-where last_name in ('JONES','BLAKE','SCOTT','KING','FORD');
-
+where upper(last_name) in ('JONES','BLAKE','SCOTT','KING','FORD');
 
