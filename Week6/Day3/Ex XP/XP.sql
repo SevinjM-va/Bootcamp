@@ -86,10 +86,21 @@ drop table customer_review;
 
 select * from rental
 select * from rental where return_date is null;
+-- !!! sayini isteyir
+select COUNT(*) from rental WHERE return_date IS NULL;
+-- !!!
 
 -- 5.
 select * from film order by replacement_cost DESC limit 30
 
+-- !!! solution
+select rental.rental_id, film.title, film.rental_rate
+from (inventory join rental on inventory.inventory_id = rental.inventory_id)
+join film on film.film_id = inventory.film_id
+where return_date is null
+order by rental_rate desc
+limit 30
+-- !!!
 -- 6.1
 select * from film_actor
 select * from actor
@@ -99,6 +110,15 @@ select * from film
 inner join actor
 on film_id = actor_id 
 where actor.first_name = 'Penelope';
+
+-- !!! solution
+select film.title
+from (actor join film_actor on actor.actor_id = film_actor.actor_id)
+join film on film.film_id = film_actor.film_id
+where film.description like '%Sumo%' 
+and actor.first_name = 'Penelope' 
+and actor.last_name = 'Monroe'
+-- !!!
 
 
 -- 6.2
@@ -119,3 +139,20 @@ select * from film
 where title ilike '%boat%'
 or description ilike '%boat%'
 order by replacement_cost DESC
+
+-- !!! solution 4th film
+SELECT film.title, film.description, film.replacement_cost
+FROM film
+JOIN inventory
+ON film.film_id = inventory.film_id
+JOIN rental
+ON rental.inventory_id = inventory.inventory_id
+JOIN customer
+ON rental.customer_id = customer.customer_id
+where customer.first_name = 'Matthew'
+and customer.last_name = 'Mahan'
+and film.title like '%Boat%' 
+or film.description like '%Boat%'
+order by film.replacement_cost desc
+limit 1
+-- !!!

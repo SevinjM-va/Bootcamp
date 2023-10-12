@@ -96,6 +96,7 @@ values
 		(select book_id from book where title = 'Harry Potter'),'2021-08-12')
 	   )
 
+-- !!! sintaks xetasi
 
 select * from library
 -- the student named Bob, borrowed the book To kill a mockingbird on the 03/03/2021
