@@ -53,9 +53,16 @@ select UPPER(first_name) from employees;
 -- 11.
 select substring(first_name from 1 for 3) from employees;
 
+-- !!! option 2
+  SELECT SUBSTRING(first_name, 1, 3) FROM employees;
+--   !!
 -- 12.
 select (first_name ||' '|| last_name) as Full_name from employees;
 
+-- !!! option 2
+     SELECT CONCAT(first_name, ' ', last_name) FROM employees;
+
+--   !!
 -- 13.
 select first_name,last_name,length(first_name ||' '|| last_name) as full_name_lenght from employees;
 
@@ -63,6 +70,12 @@ select first_name,last_name,length(first_name ||' '|| last_name) as full_name_le
 select * from employees 
 where first_name not similar to '%[0-9]%';
 
+-- !!! option  2
+    select * from employees where first_name ~ '\d';
+-- ~ for regex
+-- \ escape operator
+-- d regex for number
+ --   !!!
 -- 15.
 select * from employees limit 10;
 
@@ -107,6 +120,8 @@ where substring(last_name, 3, 1) = 'e';
 
 -- 7.
 select *,jobs.job_title from employees
+-- * butun columlari secir elave qeyd etmeye ehtiyac olmayacaq
+
 inner join jobs
 on employees.job_id = jobs.job_id;
 
