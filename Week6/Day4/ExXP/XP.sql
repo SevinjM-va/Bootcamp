@@ -19,7 +19,7 @@ select * from employees
 select (first_name, last_name)as First from employees;
 
 -- 2.
-select unique department_id from employees;
+select department_id from employees;
 
 -- 3.
 select * from employees 

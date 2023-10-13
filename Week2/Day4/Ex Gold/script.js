@@ -36,13 +36,30 @@ console.log(abbrevName("   Robin Singh")); // --> "Robin S."
 // console.log(swap('The Quick Brown Fox'));
 
 
-
+console.log('==============')
 
 // Ex 4
 
 const a = [[3, 4], [8, 3, 2], [3], [9, 3], [5, 3], [4, 3]];
 
-const b = ()=>{
-  const b = Object.find()
+
+
+let result;
+const func = (a)=>{
+
+  for (let i = 0; i < a.length; i++){
+    result = a[i].map((num => num == 3));
+    console.log(result.some(el => console.log(el)))
+  //   if (result.every){
+  //     console.log(true);
+  //   } else {
+  //     console.log(false);
+  //   }
+  //   console.log(result)
+  }
 }
-console.log()
+func(a)
+
+ 
+
+// console.log(check)
