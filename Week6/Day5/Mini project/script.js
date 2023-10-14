@@ -21,29 +21,14 @@ function submit(event){
 
   let todaysValue = endDate.defaultValue;
 
-
   // console.log(`Name: ${nameValue}`)
   // console.log(`Description: ${descriptionValue}`)
   // console.log(`Start_date: ${startDateValue}`)
   // console.log(`End_date: ${endDateValue}`)
   // console.log(`Done: ${isCompletedValue}`)
-  
 
-  const calcDayUntilToday = new Date(endDateValue).getTime() - new Date(todaysValue).getTime();
-  const a = calcDayUntilToday / (1000 * 3600 * 24);
-
-  let b1;
-  if (startDateValue < todaysValue){
-    const calcul1 = new Date(todaysValue).getTime() - new Date(startDateValue).getTime();
-    b1 = calcul1 / (1000 * 3600 * 24) + a;
-    console.log(b1)
-
-  } else if (startDateValue > todaysValue){
-    const calcul2 = new Date(startDateValue).getTime() - new Date(todaysValue).getTime();
-    b1 = a - (calcul2 / (1000 * 3600 * 24));
-  } else {
-    b1 = 0;
-  }
+    const calcDayUntilToday = new Date(endDateValue).getTime() - new Date(todaysValue).getTime();
+    const b1 = calcDayUntilToday / (1000 * 3600 * 24);
  
   object = {
     name: nameValue,
@@ -51,6 +36,7 @@ function submit(event){
     start_date: startDateValue,
     end_date: endDateValue,
     isCompleted: isCompletedValue,
+    todays_value: todaysValue,
     remaining_day: b1
   }
   
@@ -69,33 +55,88 @@ let num = 0;
 function fetch(){
   const obj = localStorage.getItem('MyObj');
   const convertObj = JSON.parse(obj);
-  displayAlla(convertObj);
   console.log(convertObj);
+  displayAlla(convertObj);
 
   convertObj.sort(function(a, b){ return new Date(a.startDate) - new Date(b.startDate)})
 
-  function displayAlla(convertObj){
+ async function displayAlla(convertObj){
 
-    const div1 = document.createElement('div');
-    div1.textContent = convertObj[num].name;
-    console.log(div1)
-    document.body.appendChild(div1);
+    const containerDiv = document.createElement('div');
+    document.body.appendChild(containerDiv);
 
+
+    const xbtn = document.createElement('button');
+    xbtn.textContent = 'x';
+    xbtn.className = 'xbnt';
+    containerDiv.appendChild(xbtn);
+
+    const editbtn = document.createElement('button');
+    editbtn.textContent = 'Edit';
+    containerDiv.appendChild(editbtn);
+
+    function editable (){
+      div1.contentEditable = 'true';
+      div2contentEditable = 'true';
+      div3.contentEditable = 'true';
+      div4.contentEditable = 'true';
+      div5.contentEditable = 'true';
+      div6.contentEditable = 'true';
+    }
+
+    editbtn.addEventListener('click',editable)
+    
+    function deleteTask(){
+      const result = confirm('Are you sure to delete this task?');
+      if(result == true)
+      document.body.removeChild(containerDiv);
+    }
+
+      xbtn.addEventListener('click', deleteTask);
+
+
+     const div1 =await document.createElement('div');
+    div1.textContent = `Name: ${convertObj[num].name}`;
+  
     const div2 = document.createElement('div');
-    div2.textContent = convertObj[num].description;
-    document.body.appendChild(div2);
+    div2.className = 'div22';
+    div2.textContent = convertObj[0].description;
+    containerDiv.appendChild(div2);
 
-    const div3 = document.createElement('div');
-    div3.textContent = convertObj[num].start_date;
-    document.body.appendChild(div3);
+    function dropdown(){
+      div2.style.padding = '5px 10px'
+      div2.style.visibility = 'visible';
+      div2.style.fontSize = '15px';
+      div2.style.backgroundColor = 'lightblue';
+      div2.style.transition = '0.5s';
+    }
+
+    await div1.addEventListener('click',dropdown)
+    containerDiv.appendChild(div1);
+   
+     const div3 = document.createElement('div');
+    div3.textContent = `Start time: ${convertObj[num].start_date}`;
+    containerDiv.appendChild(div3);
 
     const div4 = document.createElement('div');
-    div4.textContent = convertObj[num].end_date;
-    document.body.appendChild(div4);
+    div4.textContent = `End time: ${convertObj[num].end_date}`;
+    containerDiv.appendChild(div4);
 
     const div5 = document.createElement('div');
-    div5.textContent = convertObj[num].isCompleted;
-    document.body.appendChild(div5);
+    if(convertObj[num].isCompleted ==  false || new Date(convertObj[num].end_date).getTime() < new Date(convertObj[num].todays_value).getTime()){
+      div5.textContent = 'Is not completed yet';
+      containerDiv.style.backgroundColor = 'red'
+      containerDiv.appendChild(div5);
+      console.log()
+    } else {
+      div5.textContent = 'Completed';
+      containerDiv.style.backgroundColor = 'green'
+      containerDiv.appendChild(div5);
+    }
+    
+    const div6 = document.createElement('div');
+    div6.textContent = (`${convertObj[num].remaining_day} days remaining to complete the task.`);
+    containerDiv.appendChild(div6);
 
     return num++;
   }
