@@ -95,7 +95,8 @@ function fetch(){
       xbtn.addEventListener('click', deleteTask);
 
 
-     const div1 =await document.createElement('div');
+     const div1 =await document.createElement('div'); 
+    //  !!! await ?
     div1.textContent = `Name: ${convertObj[num].name}`;
   
     const div2 = document.createElement('div');
@@ -143,3 +144,4 @@ function fetch(){
   }
   console.log(num)
 
+// !!! working correctly but code structure is confusing
