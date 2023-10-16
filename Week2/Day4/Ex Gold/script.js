@@ -48,18 +48,8 @@ let result;
 const func = (a)=>{
 
   for (let i = 0; i < a.length; i++){
-    result = a[i].map((num => num == 3));
-    console.log(result.some(el => console.log(el)))
-  //   if (result.every){
-  //     console.log(true);
-  //   } else {
-  //     console.log(false);
-  //   }
-  //   console.log(result)
+    result = a[i].some((num => num == 3));
+    console.log(result)
   }
 }
 func(a)
-
- 
-
-// console.log(check)
