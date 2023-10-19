@@ -10,6 +10,8 @@ router.get('/books',(req,res)=>{
 
 router.post('/books',(req,res)=>{
   const body = req.body;
+  
+  
   books.push(body);
   res.json(body)
 });
@@ -29,5 +31,10 @@ router.put('/books/:id',(req,res)=>{
     res.json(body);
 })
 
+// !!! post etdikde id ni de nezere al objecte avto elave olunsun deye sqldeki kimi
+
+// !!! req body ni yoxla 
+
+// !!! her birinde eyni path varsa app de serverde birdefelik qeyd etmek daha uygun
 
 module.exports = router;

@@ -19,6 +19,9 @@ const triviaQuestions = [
 ];
 
 const random = Math.floor(Math.random() * (3 - 0) + 0);
+// !!! globalda etme her defe yenilecek elave ehtimallari nezere almaq lazimdi random isledende
+// !!! meselen post req gelende de eyni random mu olur ve s.
+// !!! olmursa hardasa stor etmek lazimdi amma her defesinde de deyismek get gelende
 
 router.get('/',(req,res)=>{
   const question = triviaQuestions[random].question;

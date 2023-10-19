@@ -11,3 +11,5 @@ router.get('/about',(req,res)=>{
 });
 
 module.exports =  router;
+
+// !!! bir projecting icerisinde yeni node modules a ehtiyac yoxdur
