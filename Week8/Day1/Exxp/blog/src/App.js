@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import UserFavoriteAnimals from './UserFavoriteAnimals';
 import Exercise from './Exercise3';
+import './Exercise.css'
 
 
 
@@ -34,6 +35,11 @@ function App() {
       <h3>{user.favAnimals}</h3>
 
       <UserFavoriteAnimals animallist={favAnim}/> */}
+
+      {/* Ex3 */}
+      <Exercise />
+      
+      
     </div>
   );
 }
