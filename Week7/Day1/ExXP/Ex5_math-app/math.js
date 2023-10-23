@@ -1,10 +1,5 @@
 
 
-// npm init
-// npm install lodash
-
-
-
 function add (a,b){
   console.log(a+b)
 };
