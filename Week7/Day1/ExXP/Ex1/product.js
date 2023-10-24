@@ -1,12 +1,14 @@
 // Ex 1
 const details = [
-  {aname: "table",
+  {name: "table",
   price: 12,
   category: 'furniture'},
-  {aname: "chair",
+
+  {name: "chair",
   price: 6,
   category: 'furniture'},
-  {aname: "plate",
+
+  {name: "plate",
   price: 20,
   category: 'kitchen'}
 ]

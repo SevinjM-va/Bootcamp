@@ -16,6 +16,5 @@ const arr = [
   }
 ]
 
-// export const name = 'Sevinj';
-// export const age = 20;
+
 export default arr;
