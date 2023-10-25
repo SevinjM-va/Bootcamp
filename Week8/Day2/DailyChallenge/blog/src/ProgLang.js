@@ -11,15 +11,29 @@ class Language extends React.Component{
   };
 
   phpFunc=()=>{
-    this.setState = ({languages:[0].votes + 1});
-    // burada alinmir 
-    console.log(this.setState)
-    
+    this.setState = { languages: [0].votes + 1 };
+    // burada alinmir
+
+    // !!! evvelki statei yadda saxlayaraq onun uzerinde deyisiklik etmek ucun
+    // !!! set state icerisinde arrow func istifade edirik
+    // !!! arrow func parametrine state in deyeri dusur
+    // (state)=>{return state+1} numune syntax
+
+    // !!! ve ya option 2
+    //   let newLanguages = [...this.state.languages];
+    // newLanguages[i].votes++;
+
+    // this.setState({ languages: newLanguages });
+    // console.log(this.setState);
+    // !!!
   }
+
+  // !!! elave olaraq her birine ayrica func yazmaq yerine  artirmaq ucun umumi func yazib icerisine parametr oturub ferqli call etsek daha duzgun olar
 
   render(){
     return(
       <div className='container'>
+        {/* !!! mapden istifade ede bilersen her bir dil ucun componentlerin eynidi */}
         <div className='div1'>
           <p>{this.state.languages[0].votes}</p>
           <p>{this.state.languages[0].name}</p>

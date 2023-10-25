@@ -18,6 +18,9 @@ class App extends React.Component {
     <div>
      {/* Ex1
       <CarInfo carlist = {carinfo}/> <Events/>  */}
+      {/* event komponentini bu sekilde oturmek uygun deyil
+      eger eventi car komponentinin icerisinde cagirmaq isteyirsense
+      birbasa hemin car compnentinin icerisinde import ede bilersen */}
 
       {/* Ex3
       <Phone/> */}

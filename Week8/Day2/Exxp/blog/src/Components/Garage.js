@@ -10,6 +10,7 @@ class GarageComp extends React.Component{
     return(
       <div>
         <h1>Who lives in my {this.props.garageSize} Garage?</h1>
+        {/* !!! state den de istifade ede bilersen */}
       </div>
     )
   }
