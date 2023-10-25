@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.div1,.div2,.div3,.div4{
+.div1{
   display: flex;
   justify-content: space-around;
   align-items: center;

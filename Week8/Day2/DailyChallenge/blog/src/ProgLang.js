@@ -10,36 +10,25 @@ class Language extends React.Component{
       {name: "Java", votes: 0}]}
   };
 
-  phpFunc=()=>{
-    this.setState = ({languages:[0].votes + 1});
-    // burada alinmir 
-    console.log(this.setState)
-    
+  vote=(index)=>{
+    let langArr = [...this.state.languages];
+    langArr[index].votes++;
+    console.log(index)
+    this.setState({languages: langArr})
+
   }
 
   render(){
     return(
       <div className='container'>
-        <div className='div1'>
-          <p>{this.state.languages[0].votes}</p>
-          <p>{this.state.languages[0].name}</p>
-          <a onClick={this.phpFunc}>Click Here</a>
-        </div>
-        <div className='div2'>
-          <p>{this.state.languages[1].votes}</p>
-          <p>{this.state.languages[1].name}</p>
-          <a onClick={this.pythonFunc}>Click Here</a>
-        </div>
-        <div className='div3' >
-          <p>{this.state.languages[2].votes}</p>
-          <p>{this.state.languages[2].name}</p>
-          <a onClick={this.javaScriptFunc}>Click Here</a>
-        </div>
-        <div className='div3'>
-          <p>{this.state.languages[3].votes}</p>
-          <p>{this.state.languages[3].name}</p>
-          <a onClick={this.javaFunc}>Click Here</a>
-        </div>
+          {this.state.languages.map((item,index) => (
+              <div className='div1' key={index}>
+                <p>{item.votes}</p>
+                <p>{item.name}</p>
+                <a onClick={this.vote.bind(this,index)}>Click Here</a>
+            </div>
+            )
+        )}
       </div>
     )
   }
