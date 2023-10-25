@@ -11,7 +11,8 @@ class Language extends React.Component{
   };
 
   phpFunc=()=>{
-    this.setState = ({languages:votes});
+    this.setState = ({languages:[0].votes + 1});
+    // burada alinmir 
     console.log(this.setState)
     
   }
