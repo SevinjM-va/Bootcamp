@@ -1,7 +1,14 @@
-import todoList from "./todo";
+import TodoList from './todo.js';
 
-todoList.addtask('Task 1');
-todoList.addtask('Task 2');
-todoList.markcomplete('Task 1');
+const todoList = new TodoList();
 
-console.log(todoList);
+todoList.addTask('Buy groceries');
+todoList.addTask('Go for a run');
+todoList.addTask('Read a book');
+
+todoList.markTaskComplete('Go for a run');
+
+console.log('All tasks:');
+todoList.listTasks();
+
+// !!! solution

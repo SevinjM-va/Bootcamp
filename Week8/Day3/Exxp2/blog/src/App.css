@@ -36,26 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.div1{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(255, 225, 225);
-  border: 2px solid gray;
-  margin: 8px;
-  font-size: 30px;
-  width: 450px;
-  color: #2c2f35;
-}
-a{
-  color: green;
-  cursor: pointer;
-}
-.container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 500px;
-}
