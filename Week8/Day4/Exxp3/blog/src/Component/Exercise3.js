@@ -25,5 +25,7 @@ class Exercise3 extends React.Component {
         </div>
     </div>))
       return exper
+      // !!! birbasa da return ede bilersen
+      // !!! map istifade etikde 
   }};
 export default Exercise3;

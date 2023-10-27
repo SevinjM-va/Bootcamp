@@ -1,5 +1,7 @@
 import React from 'react';
 
+// !!! component folder adinda js yazmaga ehtiyac yoxdur
+
 class ErrorBoundary extends React.Component
 {
   constructor(props){

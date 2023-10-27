@@ -11,6 +11,7 @@ class Simpleform extends React.Component{
       gender: '',
       destination: '',
       nutsFree: 'No',
+      // false yazmaq daha uygun olar boolean tipli datalar ucun
       lactoseFree: 'No',
       vegan: 'No'
     }
