@@ -2,6 +2,7 @@
 import './App.css';
 import QuotesComp from './Component/quotes';
 
+// datalari ayrica file dan import et
 
 function App() {
 

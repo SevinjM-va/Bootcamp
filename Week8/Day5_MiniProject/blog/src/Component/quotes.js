@@ -7,7 +7,7 @@ const QuotesComp =(props)=>{
   const [animation, setAnimation] = useState('');
 
 
-   let a = 0;
+   let a = 0; /* ? */
   const newQuote=()=>{
     let num = Math.floor(Math.random() * (props.info.length - 0) + 0); 
 

@@ -8,10 +8,15 @@ function Todolist () {
 
   const newTodo=(event)=>{
     setInputValue (event.target.value);
+    // !! set overwrite edir evvelki valuelari da icerisine copy etmelisen
+    // !!! ve ya yeni array copy si yaradib push etmelisen
   } 
 
   const deletData = (index) => {
-
+//  todonun id si nin oturulmesi daha sonra hemin id e esasen objectin icerisinden find etmesi daha duzgundur
+// !! umumiyyetle todo elemtinin object seklinde olmasi daha rahatlasdiracaq
+// !! ve todo item ozu de ayrica komponent olub todo list icerisinde map etmelidir
+// 
     const newDivs = [...divs];
       newDivs.splice(index, 1);
       setDivs(newDivs);
