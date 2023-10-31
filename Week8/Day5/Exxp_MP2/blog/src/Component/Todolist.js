@@ -6,6 +6,9 @@ function Todolist () {
   const [ inputValue, setInputValue ] = useState('');
   const [divs, setDivs] = useState(['Buy some milk','Do my homework']);
 
+//   {content:'todo1',
+// ischecked:false}
+
   const newTodo=(event)=>{
     setInputValue (event.target.value);
     // !! set overwrite edir evvelki valuelari da icerisine copy etmelisen
