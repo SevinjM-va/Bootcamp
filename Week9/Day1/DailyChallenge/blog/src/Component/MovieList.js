@@ -7,11 +7,10 @@ import { selectMovie } from '../movieActions';
 function MovieList (props){
 
   const showDetails = (title)=>{
-   
-    const selectedM = props.movies.find(item=> item.title === title);
-     props.dispatch(selectMovie(selectedM))
+    const selectedM = props.movies.find((item) => item.title === title);
+    props.dispatch(selectMovie(selectedM));
 
-
+    //  !!!mapDispatchToProps istifade olunmasi daha uygun
   }
   return(
     <div className='container'>

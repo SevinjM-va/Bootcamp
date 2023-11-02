@@ -1,44 +1,44 @@
-
-import { combineReducers, createStore} from 'redux';
-
+import { combineReducers, createStore } from 'redux';
 
 const initialState = [
   // {accountNumber: '',fsc: '', holdeName: '', amount: ''}
-]
+];
 let id = initialState.length;
 
-function transactionReducer(state=initialState,action){
- if(action.type === 'ADD_TRANSACTIONS'){
-  const tx = {...action.payload, id: ++id}
-  return [...state, tx]
- } 
-if (action.type === 'DELETED_DATA' ){
-  return [...state.filter(item=> item.id != action.id )]
- } 
-//  console.log(state)
- return state
-}
+function transactionReducer(state = initialState, action) {
+  if (action.type === 'ADD_TRANSACTIONS') {
+          console.log(
+            '🚀 ~ file: transactionReducer.js:12 ~ transactionReducer ~ action.payload:',
+            action.payload
+          );
 
-function selectedTxReducer(state = null, action){
-  if(action.type === 'EDITED_DATA'){
-    console.log(action)
-    return action.obj;
+    if (action.payload.id) {
+      const tx = { ...action.payload};
+      return [...state, tx];
+    } else {
+      const tx = { ...action.payload, id: ++id };
+      return [...state, tx];
+    }
   }
-  if(action.type === 'DELETED_TRANSACTION'){
-    if(state?.id != action.id) return state;
-   return null
+  if (action.type === 'DELETED_DATA') {
+    return [...state.filter((item) => item.id != action.id)];
   }
-  if(action.type === 'RESET_SELECTED_TRANSACTION'){
-   return null
-  } if(action.type === 'UPDATE_TRANSACTION'){
-    const stateWithoutPreviousTx = state.filter(tx => tx.id  != action.payload.id)
-    return [...stateWithoutPreviousTx,action.payload]
-   }
+  if (action.type === 'UPDATE_TRANSACTION') {
+    return state.map((item) => {
+      if (item.id == action.payload.id) {
+        return action.payload;
+      } else {
+        return item;
+      }
+    });
+
+  }
   return state;
 }
 
+
 const rootReducer = combineReducers({
   transactions: transactionReducer,
-  selectedTx: selectedTxReducer
-})
+
+});
 export const store = createStore(rootReducer);
