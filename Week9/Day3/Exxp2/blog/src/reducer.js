@@ -16,7 +16,5 @@ function reducer (state, action){
 
 const middlewareEnhancer = applyMiddleware(thunk);
 
-// function logAction (state, action){
-//   return state
-// }
+
 export const store = createStore(reducer,initialState,middlewareEnhancer);
