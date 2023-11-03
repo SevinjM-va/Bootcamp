@@ -23,7 +23,9 @@ console.log(props.calcul.count)
     },1000)
     
   }
-
+// !!! async incrementi action icerisinde istifade etmek lazim idi
+// ! daha sonra middleware ile onu dispatch etmek
+// !! store js de ise apply middleware istifade etmek
 
   return(
     <div className='container'>

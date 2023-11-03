@@ -23,6 +23,7 @@ const Robofriends = (props)=>{
 
 
 const inputValue= (event)=>{ //!!!Burda onchange-lə yazı silinəndə array geri qayıtmır. Nə qədər etdim alınmadı.
+  // event.preventDefault(); 
   const val = event.key; 
   console.log(val)
     let findRobot = [...data]
