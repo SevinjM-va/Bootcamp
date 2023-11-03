@@ -26,10 +26,7 @@ const TransactionForm = (props) => {
       props.dispatch({ type: 'ADD_TRANSACTIONS', payload });
      
     } else if (onEdit) {
-      console.log(
-        '🚀 ~ file: TransactionForm.js:7 ~ TransactionForm ~ inputValue:',
-        inputValue
-      );
+    
       props.dispatch({
         type: 'UPDATE_TRANSACTION',
         payload: { ...inputValue },
