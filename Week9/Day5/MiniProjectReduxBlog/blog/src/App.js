@@ -10,13 +10,19 @@ import './App.css';
 function App() {
   return (
     <div>
-        <Navbar/>
-         <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-          <Route path='/:post_id' element={<Post/>}/>
-        </Routes>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/:post_id" element={<Post />} />
+        {/* dynamic path i birbasa verdiyin zaman digerleri ile konflikde gire biler
+          umumiyyetle router her bir path i xuyur sonda qerar verir hansi komponenti render edeceyine
+          amma <switch> istifade edildiyi zaman first instances nezere alir
+
+          Documentation https://v5.reactrouter.com/web/api/Switch
+          */}
+      </Routes>
     </div>
   );
 }

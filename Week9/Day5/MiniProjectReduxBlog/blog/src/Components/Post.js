@@ -21,7 +21,9 @@ const Post = (props)=>{
             <div key={item.id}  className='card-content'>
             <h5>{item.title}</h5>
             <p>{item.body}</p>
-            <button onClick={()=>handleClick(item.id)}><Link to="/">Delete Post</Link></button>
+            <button onClick={()=>handleClick(item.id)}>
+              <Link to="/">Delete Post</Link></button>{/* ??? */}
+
           </div>)
           }
           })}
