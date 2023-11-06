@@ -11,24 +11,23 @@ function Todolist () {
   } 
 
   const deletData = (index) => {
-
     const newDivs = [...divs];
       newDivs.splice(index, 1);
       setDivs(newDivs);
+      console.log(divs)
   };
 
   const enteredData=(event)=>{
     if(event.key == 'Enter'){
       setDivs(prevDivs => [...prevDivs, <div onClick={deletData} key={prevDivs.length}>{inputValue}</div>])
       setInputValue('')
-     
     }
   }
   return (
     <div  className='container' >
        <h1 className='header'>Todo's</h1>
-        <div >
-          {divs.map((div, index) => (
+        <div>
+          {divs.length === 0 ? <p>Todolist is empty</p>: divs.map((div, index) => (
           <div key={index} className='firstList' onClick={() => deletData(index)}>
           {div}
         </div>

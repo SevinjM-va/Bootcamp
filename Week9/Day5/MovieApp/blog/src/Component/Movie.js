@@ -5,11 +5,6 @@ import{ Link } from 'react-router-dom';
 
 const OMDbAPI = `https://www.omdbapi.com/?apikey=95ea4de7&i=`;
 
-const loading = (ms = 2000)=>
- new Promise((resolve,reject) => {
-  setTimeout(resolve, ms)
-})
-
 
 
 function Movie(props) {

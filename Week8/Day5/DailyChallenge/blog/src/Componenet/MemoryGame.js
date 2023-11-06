@@ -6,13 +6,13 @@ const MemoryGame =(props)=>{
   const [ topScore, settopScore ] = useState(0);
 
 
-  let prev = '';
+
   const randomHero =(id)=>{
     setheroes({heroes: props.info.superheroes.sort((a,b)=>(Math.random() > 0.5 ? -1 : 1))})
       const obj = props.info.superheroes.find(item=> item.id === id);
       if(obj.clicked == false){
-        prev = obj.clicked = true;
-        setscore(score + 1)
+        obj.clicked = true;
+        setscore((prevScore)=>prevScore + 1)
       } else {
         props.info.superheroes.map((item)=>(item.clicked = false))
         console.log(props.info.superheroes.map((item)=>(item.clicked)))
@@ -20,7 +20,7 @@ const MemoryGame =(props)=>{
           settopScore(score)
         }
         console.log(topScore)
-        setscore(score - score)
+        setscore(0)
       }
       }
       
