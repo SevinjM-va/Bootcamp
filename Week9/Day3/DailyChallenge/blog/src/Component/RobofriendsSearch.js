@@ -13,7 +13,6 @@ const [robot, setRobot]=useState('')
 
 
 useEffect(()=>{
-  
   const fetchedData = async ()=> {
     try{
       props.dispatch({type: 'IS_LOADINA',payload: true})
