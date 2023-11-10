@@ -3,12 +3,15 @@ import {createStore} from 'redux';
 const initialState = [];
 
 function Reducer(state=initialState, action){
+  if (action.type === 'FETCHING_IMAGES'){
+    // console.log('action.payload', action.payload)
+    return action.payload
+  }
+
   if(action.type ==='LOADING_ON' ){
-    console.log('true')
     return true
   }
   if(action.type ==='LOADING_OFF' ){
-    console.log('false')
     return false
   }
   return state;

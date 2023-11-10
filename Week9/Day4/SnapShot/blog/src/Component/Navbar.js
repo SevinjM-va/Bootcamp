@@ -7,30 +7,32 @@ import { client } from '../API_Key';
 
 
 const Navbar=(props)=>{
+  console.log('proppppssssssssss', props.info)
   const [photo, setPhotos] = useState('');
-  const [name, setName ] = useState('');
+  const [searchName, setsearchName ] = useState('');
   const [changebtn, setChangebtn] = useState('');
   const navigate = useNavigate();
-  let query;
 
   const mountainbtn=(e)=>{
     e.preventDefault();
     const btnValue = e.target.innerHTML;
-    if(btnValue === 'Mountain'){setName(btnValue)}
-    if(btnValue === 'Beaches'){setName(btnValue)}
-    if(btnValue === 'Birds'){setName(btnValue)}
-    if(btnValue === 'About'){setName(btnValue)}
+    if(btnValue === 'Mountain'){setsearchName(btnValue)}
+    if(btnValue === 'Beaches'){setsearchName(btnValue)}
+    if(btnValue === 'Birds'){setsearchName(btnValue)}
+    if(btnValue === 'Food'){setsearchName(btnValue)}
   }
+  console.log('nammmmmmm', searchName)
+
   useEffect(()=>{
     props.dispatch({type: 'LOADING_ON'})
      setTimeout(()=>{
          const fetchImg = async()=>{
-            client.photos.search({query: 'Mountain',per_page:24}).then(res=>setPhotos(res.photos))
+            client.photos.search({query: searchName ,per_page:24}).then((res)=>{props.dispatch({type: 'FETCHING_IMAGES',payload: res.photos})})
            }
            fetchImg()
            props.dispatch({type: 'LOADING_OFF'})
-     },1000)
- }, [])
+     },500)
+ },[searchName])
  
   
   const handleSubmit=(e)=>{
@@ -39,6 +41,7 @@ const Navbar=(props)=>{
     const formData =  new FormData(etarget)
     const searchInput = formData.get('search');
     navigate('/'+ searchInput);
+    setsearchName(searchInput)
   }
   const changeBtn=(e)=>{
     setChangebtn(e.target.value)
@@ -62,7 +65,7 @@ const Navbar=(props)=>{
             <li onClick={mountainbtn} name ='food'><Link to="/food">Food</Link></li>
           </ul>
         </div>
-        <h2>{name} Pictures</h2>
+        <h2>{searchName.charAt(0).toUpperCase()+searchName.slice(1)} Pictures</h2>
       </div>
   )
 }

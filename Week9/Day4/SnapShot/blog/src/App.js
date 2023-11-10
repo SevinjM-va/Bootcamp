@@ -14,17 +14,6 @@ import { connect } from 'react-redux';
 function App (props) {
   const [photo, setPhotos] = useState('');
 
-  useEffect(()=>{
-    props.dispatch({type: 'LOADING_ON'})
-     setTimeout(()=>{
-         const fetchImg = async()=>{
-            client.photos.search({query: 'Mountain',per_page:24}).then(res=>setPhotos(res.photos))
-           }
-           fetchImg()
-           props.dispatch({type: 'LOADING_OFF'})
-     },1000)
- }, [])
-
     return (
       <div className='container'>
         <Navbar/>
