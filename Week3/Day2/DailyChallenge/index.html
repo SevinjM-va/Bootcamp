@@ -8,17 +8,29 @@
 
     <h1>Mad Libs</h1>
 
-    <form id="libform" onsubmit="handleSubmit">
-        <label for="noun">Noun:</label><input type="text" id="noun"><br>
-        <label for="adjective">Adjective:</label><input type="text" id="adjective"><br>
-        <label for="person">Someone's Name:</label><input type="text" id="person"><br>
-        <label for="verb">Verb:</label><input type="text" id="verb"><br>
-        <label for="place">A place:</label><input type="text" id="place"><br>
+    <form id="libform">
+        <label for="noun">Noun:</label>
+        <input type="text" id="noun">
+        <br>
+        <label for="adjective">Adjective:</label>
+        <input type="text" id="adjective">
+        <br>
+        <label for="person">Someone's Name:</label>
+        <input type="text" id="person">
+        <br>
+        <label for="verb">Verb:</label>
+        <input type="text" id="verb">
+        <br>
+        <label for="place">A place:</label>
+        <input type="text" id="place">
+        <br>
         <button id="lib-button">Lib it!</button>
     </form>
 
     <p>Generated story: 
-    <span id="story"></span>
+    <span id="story">
+        <button id="shufflebtn">Shuffle</button>
+    </span>
     </p>
 
     <script src="script.js">
