@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do List</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+     background-color: #ff4f5e;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 500px;
+     flex-direction: column;
+     color: white;
+    }
+    .container{
+      width: 350px;
+      /* border: 2px solid black; */
+      height: 300px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    input{
+      padding: 20px;
+      border: none;
+    }
+    form{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      border: none;
+    }
+    #textInput{
+      width: 75%;
+    }
+    #submitbtn{
+      width: 25%;
+    }
+    .listTasks{
+      visibility: hidden;
+      background-color: white;
+      margin: 10px 10px;
+      width: 94%;
+      padding: 10px;
+    }
+  
+    .miniDiv{
+      border: 2px solid gray;
+      background-color: white;
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+    .xbtn{
+      padding: 5px;
+      background-color: #ff4f5e;
+      border: none;
+      margin: 2px;
+    }
+    p{
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>TO-DO LIST</h1>
+  <div class="container">
+    <form>
+      <input id="textInput" type="text" placeholder="NEW TASK">
+      <input id="submitbtn" type="submit" value="ADD">
+    </form>
+      <div class="listTasks"></div>
+    
+  </div>
+
+
+
+
+  <script src="script.js">
+
+  </script>
+</body>
+</html>

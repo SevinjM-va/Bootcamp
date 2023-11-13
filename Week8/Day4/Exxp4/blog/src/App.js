@@ -6,7 +6,7 @@ async function App() {
     const info = (await fetch('https://webhook.site/15b2db3c-5066-444c-b9d9-42d15c5243ac')).json();
     // !! json ozu de asinxrondur iki defe await olmali
     console.log(info);
-    const body = {
+    const details = {
       key1: 'myusername',
       email: 'mymail@gmail.com',
       name: 'Isaac',

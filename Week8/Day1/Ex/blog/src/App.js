@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Actors from './actors';
+import Button from './Actor';
 
 const actors = [
   {
@@ -18,11 +18,10 @@ const actors = [
 ]
 
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>Actors</h1>
-      <Actors actorslist={actors} />
+    <div className="box">
+      <Button/>
     </div>
   )
 }

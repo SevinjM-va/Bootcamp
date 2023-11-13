@@ -5,11 +5,12 @@ const initialState = [
   {id: '3', title: 'Ea molestias quasi exercitationem repellat qui ipsa sit aut', body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptate laborum perferendis, enim repellendus ipsam sunt autem at odit dolorum, voluptatum suscipit iste harum cum magni itaque animi laudantium fugiat'}
 ];
 
-function Reducer (state=initialState, action){
+
+function reducer (state=initialState, action){
     if(action.type === 'DELETE_POST'){
       return state.filter(item=>item.id !== action.payload)
     }
   return state
 }
 
-export const store = createStore(Reducer);
+export const store = createStore(reducer);
