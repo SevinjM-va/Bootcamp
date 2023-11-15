@@ -3,11 +3,11 @@ import { Form, Link } from 'react-router-dom';
 import {createClient} from 'pexels';
 import { connect } from 'react-redux';
 
-const API_Key= 'lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU';
+const API_Key='lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU';
 
 const API = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=	lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU&q=`
 
-const API_2 =  'http://dataservice.accuweather.com/currentconditions/v1/'
+const API_2 ='http://dataservice.accuweather.com/currentconditions/v1/'
 
 const testData = [
   {
@@ -164,39 +164,61 @@ const testData = [
 
 const Navbar=(props)=>{
 //   console.log('ppp',props.info.data)
+const [inputName, setInputName] = useState('')
+const [city, setCity] = useState('');
 
-
-  const searchInput = useRef();
+//   const searchInput = useRef();
 
   const handleChange =async(e)=>{
     e.preventDefault(); 
-    // const search = searchInput.current.value;
-    // const fetchData = await fetch(API+search);
-    // const data = await fetchData.json();
-    //   if(data !== null){
-    //     console.log(data)
-        // setCity(e.target.value)
-        props.dispatch({type: 'CITY_NAME', payload: testData})
+    const search = e.target.value;
+    setInputName(search);
+    const fetchData = await fetch(API+search);
+    const data = await fetchData.json();
+      if(data !== null){
+        props.dispatch({type: 'CITY_NAME', payload: data})
+    } else {
+        props.dispatch({type: 'CITY_NAME', payload: []})
     }
-    // }
+    }
   
     const handleSubmit=async(e)=>{
       e.preventDefault(); 
-    //   let changeCity =  city.charAt(0).toUpperCase()+city.slice(1);
-
-    //   const compareData =await props.info.data.find(item=>item.LocalizedName === changeCity)
-      
-    //   props.dispatch({type: 'FINDING_CITY', payload: compareData});
-
-    //   console.log('compare',compareData )
-    //   const fetchingTemp = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${compareData.Key}?apikey=lMpe61ouqWnEg9fMOOGvAVTlenGK0tk`);
-    //   const key = await fetchingTemp.json();
-    //   if(key !== null){
-    //         console.log(key)
-    // }
-}
+      const form = e.target;
+      const formData =  new FormData(form);
+      const searchIn = formData.get('searchInput')
+      const correctName = searchIn.charAt(0).toUpperCase()+searchIn.slice(1);
+      props.dispatch({type: 'CITY_NAME', payload: []})
+      const findCity = await props.info.data.find(item=>item.LocalizedName == correctName)
+      console.log('tapdim',findCity)
+      if(findCity){
+        setCity(findCity)
+        
+      }
+    }
   
-// console.log('checking',props.info.data)
+    // const fetch1 = async() => {
+    //     try{
+    //     await fetch(API_2+city.Key+'?apikey='+API_Key)
+    //       .then(response => response.json())
+    //       .then(data => console.log(data));
+    //     }catch(error){
+    //         console.error('Error fetching data1:', error);
+    //     }
+    // };
+
+
+
+    const handleClick=(e)=>{
+        console.log('clilkeyende', e.target.innerText)
+        props.dispatch({type: 'CITY_NAME', payload: []})
+        setInputName(e.target.innerText)
+    }
+
+
+
+
+
   return(
     <div className='navbarContainer'>
       <div className='navbar'>
@@ -208,23 +230,34 @@ const Navbar=(props)=>{
       </div>
       <div className='formDiv'>
 
-        <form  onSubmit={handleSubmit}><Link to='/home'>
+        <form onSubmit={handleSubmit} onClick={fetch1}>
           
-          <input type='search' list='cities' ref={searchInput} name='searchInput' id='searchInput' onChange={handleChange}/>
-            <datalist id='cities' name='optiondata'> 
-              {props.info.data.map((item)=>{
+          <input type='search' list='cities' onChange={handleChange} name='searchInput' value={inputName}
+           id='searchInput'></input>
+            <div id='cities' name='optiondata'>
+              {props.info.data? props.info.data.map((item)=>{
                 return(
-                    <option key={item.Key} value={item.LocalizedName}>{item.LocalizedName}</option>
+                    <p key={item.Key} onClick={handleClick} value={item.LocalizedName}>{item.LocalizedName}</p>
                 )
-              })}
-            </datalist></Link>
-        </form>
+              }) : ''}
+              
+            </div>
+            
+            </form>
       </div>
+
+      <div className='container'>
+            <h1>Home</h1>
+        <div className='dataBox'>
+            <h3>{city.LocalizedName}</h3>
+        </div>
+      
+    </div>
     </div>
     
   )}
 
-const mapStateTpProps=(state)=>({
+const mapStateToProps=(state)=>({
   info: state
 })
-export default connect(mapStateTpProps)(Navbar);
+export default connect(mapStateToProps)(Navbar);
