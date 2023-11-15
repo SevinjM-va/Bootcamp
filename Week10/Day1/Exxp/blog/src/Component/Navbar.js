@@ -9,6 +9,9 @@ const API = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete
 
 const API_2 =  'http://dataservice.accuweather.com/currentconditions/v1/'
 
+// !!! sexsi melumatlat hansiki paylasilmasi duzgun deyil .env faylindan istifade edilmeli
+// !!! https://www.codementor.io/@parthibakumarmurugesan/what-is-env-how-to-set-up-and-run-a-env-file-in-node-1pnyxw9yxj
+
 const testData = [
   {
       "Version": 1,

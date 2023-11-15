@@ -16,4 +16,6 @@ function reducer (state = initialState, action){
   return state;
 }
 
+// !! favorit city hissesi yoxdur
+
 export const store = createStore(reducer);
