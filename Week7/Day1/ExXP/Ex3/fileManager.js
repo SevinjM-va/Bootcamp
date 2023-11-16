@@ -1,22 +1,24 @@
+import fs from "fs";
 
-const fs = require("fs");
-
-fs.readFile ("Hello World.txt" ,"utf8",(err, data)=>{
+function read (filepath){
+return fs.readFile (filepath,'utf-8',(err, data)=>{
   if(err){
     console.log(err)
-  } else {
-    console.log('Hello World')
-  }
+  } console.log(data)
 });
-fs.writeFile('Bye World.txt', content,(err)=>{
+}
+
+function write(filepath){
+return fs.writeFile(filepath, 'Byeeee World!!',(err)=>{
   if(err){
     console.log(err)
   } else {
     console.log('File written')
   }
 })
-
-module.exports = {readFile,  writeFile};
-
+}
 
 
+export {
+  read, write
+}

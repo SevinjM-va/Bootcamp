@@ -1,9 +1,7 @@
 
-import {readFile,writeFile} from "./fileManager";
+import {read,write} from "./fileManager.js";
 
 
-const x = readFile('Hello World');
+read('./helloWorld.txt');
+write('byeWorld.txt');
 
-console.log(x);
-
-writeFile('Bye World.txt', 'Writing to the file');

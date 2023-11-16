@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile('source.txt','utf-8',(err,data)=>{
+fs.readFile('./source.txt','utf-8',(err,data)=>{
   if(err){
     console.log(err)
   } 

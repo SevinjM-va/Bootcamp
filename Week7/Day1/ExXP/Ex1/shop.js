@@ -1,5 +1,5 @@
 
-const product = require('./product');
+import product from './product';
 
 function a (name){
 if (product.find(item => item.name == name)){
