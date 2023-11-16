@@ -16,7 +16,7 @@ function Home(props){
   )
 }
 
-const mapStateTpProps=(state)=>({
+const mapStateToProps=(state)=>({
   info: state
 })
-export default connect(mapStateTpProps)(Home);
+export default connect(mapStateToProps)(Home);

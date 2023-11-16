@@ -56,31 +56,42 @@ li{
 }
 a{
   text-decoration: none;
-  color: white;
   font-size: 20px;
 }
 .formDiv{
+  margin: 20px;
   display: flex;
   justify-content: center;
-  margin: 20px;
 }
-#searchInput{
-  padding: 20px;
-  width: 500px;
-  border-left: none;
-}
-#submitInput{
-  padding: 20px;
-  border-right: none;
-  cursor: pointer;
-  background-color: gray;
-}
-.container{
+form{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
   border: 2px solid black;
-  height: 480px;
 }
 .dataBox{
   border: 2px solid black;
   width: 200px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#searchInput{
+  padding: 20px;
+  border:none;
+}
+
+.container{
+  height: 480px;
+  border: 2px solid black;
+  text-align: center;
+}
+select{
+  border: none;
+}
+p{
+  margin: 0;
+}
+p:hover{
+  background-color: #409ab3;
+  cursor: pointer;
 }
