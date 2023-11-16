@@ -1,266 +1,296 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Form, Link } from 'react-router-dom';
-import {createClient} from 'pexels';
+import { createClient } from 'pexels';
 import { connect } from 'react-redux';
 
-const API_Key='lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU';
+const API_Key = 'lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU';
 
-const API = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=	lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU&q=`
+const API = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=lMpe61ouqWnEg9fMOOGvAVTlenGK0tkU&q=`;
 
-const API_2 ='http://dataservice.accuweather.com/currentconditions/v1/'
+const API_2 = 'http://dataservice.accuweather.com/currentconditions/v1/';
 
 // !!! sexsi melumatlat hansiki paylasilmasi duzgun deyil .env faylindan istifade edilmeli
 // !!! https://www.codementor.io/@parthibakumarmurugesan/what-is-env-how-to-set-up-and-run-a-env-file-in-node-1pnyxw9yxj
 
 const testData = [
   {
-      "Version": 1,
-      "Key": "27103",
-      "Type": "City",
-      "Rank": 20,
-      "LocalizedName": "Baku",
-      "Country": {
-          "ID": "AZ",
-          "LocalizedName": "Azerbaijan"
-      },
-      "AdministrativeArea": {
-          "ID": "BA",
-          "LocalizedName": "Baku"
-      }
+    Version: 1,
+    Key: '27103',
+    Type: 'City',
+    Rank: 20,
+    LocalizedName: 'Baku',
+    Country: {
+      ID: 'AZ',
+      LocalizedName: 'Azerbaijan',
+    },
+    AdministrativeArea: {
+      ID: 'BA',
+      LocalizedName: 'Baku',
+    },
   },
   {
-      "Version": 1,
-      "Key": "2595527",
-      "Type": "City",
-      "Rank": 65,
-      "LocalizedName": "Bakuo Subdistrict",
-      "Country": {
-          "ID": "CN",
-          "LocalizedName": "China"
-      },
-      "AdministrativeArea": {
-          "ID": "XZ",
-          "LocalizedName": "Tibet"
-      }
+    Version: 1,
+    Key: '2595527',
+    Type: 'City',
+    Rank: 65,
+    LocalizedName: 'Bakuo Subdistrict',
+    Country: {
+      ID: 'CN',
+      LocalizedName: 'China',
+    },
+    AdministrativeArea: {
+      ID: 'XZ',
+      LocalizedName: 'Tibet',
+    },
   },
   {
-      "Version": 1,
-      "Key": "171485",
-      "Type": "City",
-      "Rank": 65,
-      "LocalizedName": "Bakuriani",
-      "Country": {
-          "ID": "GE",
-          "LocalizedName": "Georgia"
-      },
-      "AdministrativeArea": {
-          "ID": "SJ",
-          "LocalizedName": "Samtskhe-Javakheti"
-      }
+    Version: 1,
+    Key: '171485',
+    Type: 'City',
+    Rank: 65,
+    LocalizedName: 'Bakuriani',
+    Country: {
+      ID: 'GE',
+      LocalizedName: 'Georgia',
+    },
+    AdministrativeArea: {
+      ID: 'SJ',
+      LocalizedName: 'Samtskhe-Javakheti',
+    },
   },
   {
-      "Version": 1,
-      "Key": "3471519",
-      "Type": "City",
-      "Rank": 65,
-      "LocalizedName": "Bakunase",
-      "Country": {
-          "ID": "ID",
-          "LocalizedName": "Indonesia"
-      },
-      "AdministrativeArea": {
-          "ID": "NT",
-          "LocalizedName": "East Nusa Tenggara"
-      }
+    Version: 1,
+    Key: '3471519',
+    Type: 'City',
+    Rank: 65,
+    LocalizedName: 'Bakunase',
+    Country: {
+      ID: 'ID',
+      LocalizedName: 'Indonesia',
+    },
+    AdministrativeArea: {
+      ID: 'NT',
+      LocalizedName: 'East Nusa Tenggara',
+    },
   },
   {
-      "Version": 1,
-      "Key": "255423",
-      "Type": "City",
-      "Rank": 65,
-      "LocalizedName": "Bakura",
-      "Country": {
-          "ID": "NG",
-          "LocalizedName": "Nigeria"
-      },
-      "AdministrativeArea": {
-          "ID": "SO",
-          "LocalizedName": "Sokoto"
-      }
+    Version: 1,
+    Key: '255423',
+    Type: 'City',
+    Rank: 65,
+    LocalizedName: 'Bakura',
+    Country: {
+      ID: 'NG',
+      LocalizedName: 'Nigeria',
+    },
+    AdministrativeArea: {
+      ID: 'SO',
+      LocalizedName: 'Sokoto',
+    },
   },
   {
-      "Version": 1,
-      "Key": "255805",
-      "Type": "City",
-      "Rank": 65,
-      "LocalizedName": "Bakundi",
-      "Country": {
-          "ID": "NG",
-          "LocalizedName": "Nigeria"
-      },
-      "AdministrativeArea": {
-          "ID": "TA",
-          "LocalizedName": "Taraba"
-      }
+    Version: 1,
+    Key: '255805',
+    Type: 'City',
+    Rank: 65,
+    LocalizedName: 'Bakundi',
+    Country: {
+      ID: 'NG',
+      LocalizedName: 'Nigeria',
+    },
+    AdministrativeArea: {
+      ID: 'TA',
+      LocalizedName: 'Taraba',
+    },
   },
   {
-      "Version": 1,
-      "Key": "262314",
-      "Type": "City",
-      "Rank": 65,
-      "LocalizedName": "Bakun",
-      "Country": {
-          "ID": "PH",
-          "LocalizedName": "Philippines"
-      },
-      "AdministrativeArea": {
-          "ID": "BEN",
-          "LocalizedName": "Benguet"
-      }
+    Version: 1,
+    Key: '262314',
+    Type: 'City',
+    Rank: 65,
+    LocalizedName: 'Bakun',
+    Country: {
+      ID: 'PH',
+      LocalizedName: 'Philippines',
+    },
+    AdministrativeArea: {
+      ID: 'BEN',
+      LocalizedName: 'Benguet',
+    },
   },
   {
-      "Version": 1,
-      "Key": "174081",
-      "Type": "City",
-      "Rank": 73,
-      "LocalizedName": "Bakum",
-      "Country": {
-          "ID": "DE",
-          "LocalizedName": "Germany"
-      },
-      "AdministrativeArea": {
-          "ID": "NI",
-          "LocalizedName": "Lower Saxony"
-      }
+    Version: 1,
+    Key: '174081',
+    Type: 'City',
+    Rank: 73,
+    LocalizedName: 'Bakum',
+    Country: {
+      ID: 'DE',
+      LocalizedName: 'Germany',
+    },
+    AdministrativeArea: {
+      ID: 'NI',
+      LocalizedName: 'Lower Saxony',
+    },
   },
   {
-      "Version": 1,
-      "Key": "111073",
-      "Type": "City",
-      "Rank": 75,
-      "LocalizedName": "Baku",
-      "Country": {
-          "ID": "CD",
-          "LocalizedName": "Democratic Republic of the Congo"
-      },
-      "AdministrativeArea": {
-          "ID": "IT",
-          "LocalizedName": "Ituri"
-      }
+    Version: 1,
+    Key: '111073',
+    Type: 'City',
+    Rank: 75,
+    LocalizedName: 'Baku',
+    Country: {
+      ID: 'CD',
+      LocalizedName: 'Democratic Republic of the Congo',
+    },
+    AdministrativeArea: {
+      ID: 'IT',
+      LocalizedName: 'Ituri',
+    },
   },
   {
-      "Version": 1,
-      "Key": "3165319",
-      "Type": "City",
-      "Rank": 75,
-      "LocalizedName": "Bakula Guri",
-      "Country": {
-          "ID": "IN",
-          "LocalizedName": "India"
-      },
-      "AdministrativeArea": {
-          "ID": "AS",
-          "LocalizedName": "Assam"
-      }
-  }
-]
+    Version: 1,
+    Key: '3165319',
+    Type: 'City',
+    Rank: 75,
+    LocalizedName: 'Bakula Guri',
+    Country: {
+      ID: 'IN',
+      LocalizedName: 'India',
+    },
+    AdministrativeArea: {
+      ID: 'AS',
+      LocalizedName: 'Assam',
+    },
+  },
+];
 
-const Navbar=(props)=>{
-//   console.log('ppp',props.info.data)
-const [inputName, setInputName] = useState('')
-const [city, setCity] = useState('');
+const Navbar = (props) => {
+  console.log('🚀 ~ file: Navbar.js:169 ~ Navbar ~ props:', props.info);
+  //   console.log('ppp',props.info.data)
+  const [inputName, setInputName] = useState('');
+  const [city, setCity] = useState('');
+  const inptValue = useRef();
 
-//   const searchInput = useRef();
+  //   const searchInput = useRef();
 
-  const handleChange =async(e)=>{
-    e.preventDefault(); 
+  const handleChange = async (e) => {
+    e.preventDefault();
     const search = e.target.value;
+    console.log('🚀 ~ file: Navbar.js:180 ~ handleChange ~ search:', search);
     setInputName(search);
-    const fetchData = await fetch(API+search);
-    const data = await fetchData.json();
-      if(data !== null){
-        props.dispatch({type: 'CITY_NAME', payload: data})
-    } else {
-        props.dispatch({type: 'CITY_NAME', payload: []})
-    }
-    }
-  
-    const handleSubmit=async(e)=>{
-      e.preventDefault(); 
-      const form = e.target;
-      const formData =  new FormData(form);
-      const searchIn = formData.get('searchInput')
-      const correctName = searchIn.charAt(0).toUpperCase()+searchIn.slice(1);
-      props.dispatch({type: 'CITY_NAME', payload: []})
-      const findCity = await props.info.data.find(item=>item.LocalizedName == correctName)
-      console.log('tapdim',findCity)
-      if(findCity){
-        setCity(findCity)
-        
+    try {
+      const fetchData = await fetch(
+        `https://api.openweathermap.org/geo/1.0/direct?q=${inputName}&limit=5&appid=aa36de0e5b3ddaab2da6e4b5e2d8e829`
+      );
+      const data = await fetchData.json();
+      console.log('🚀 ~ file: Navbar.js:184 ~ Navbar ~ data:', data);
+
+      if (data.length) {
+        props.dispatch({ type: 'CITY_NAME', payload: data });
       }
+      if (!inputName.length) {
+        props.dispatch({ type: 'CITY_NAME', payload: [] });
+      }
+    } catch (error) {
+      console.log(error);
     }
-  
-    // const fetch1 = async() => {
-    //     try{
-    //     await fetch(API_2+city.Key+'?apikey='+API_Key)
-    //       .then(response => response.json())
-    //       .then(data => console.log(data));
-    //     }catch(error){
-    //         console.error('Error fetching data1:', error);
-    //     }
-    // };
+  };
 
-
-
-    const handleClick=(e)=>{
-        console.log('clilkeyende', e.target.innerText)
-        props.dispatch({type: 'CITY_NAME', payload: []})
-        setInputName(e.target.innerText)
-    }
-
-
-
-
-
-  return(
-    <div className='navbarContainer'>
-      <div className='navbar'>
-          <h3>Herolo Weather Task</h3>
-          <ul>
-            <li><Link to='/home'>Home</Link></li>
-            <li><Link to='/favourites'>Favourites</Link></li>
-          </ul>
-      </div>
-      <div className='formDiv'>
-
-        <form onSubmit={handleSubmit} onClick={fetch1}>
-          
-          <input type='search' list='cities' onChange={handleChange} name='searchInput' value={inputName}
-           id='searchInput'></input>
-            <div id='cities' name='optiondata'>
-              {props.info.data? props.info.data.map((item)=>{
-                return(
-                    <p key={item.Key} onClick={handleClick} value={item.LocalizedName}>{item.LocalizedName}</p>
-                )
-              }) : ''}
-              
-            </div>
-            
-            </form>
-      </div>
-
-      <div className='container'>
-            <h1>Home</h1>
-        <div className='dataBox'>
-            <h3>{city.LocalizedName}</h3>
-        </div>
-      
-    </div>
-    </div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const findCity = await props.info.find(
+      (item) => item.name == inputName
+    );
+    const fetchData = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${findCity.Lat}&lon=${findCity.Lon}&appid=aa36de0e5b3ddaab2da6e4b5e2d8e829`
+    );
+    const data = await fetchData.json();
+    setCity(JSON.stringify(fetchData))
     
-  )}
+    console.log('🚀 ~ file: Navbar.js:184 ~ Navbar ~ data:', findCity);
+  };
+  // const form = e.target;
+  // const formData = new FormData(form);
+  // const searchIn = formData.get('searchInput');
+  // const correctName = searchIn.charAt(0).toUpperCase() + searchIn.slice(1);
+  // props.dispatch({ type: 'CITY_NAME', payload: [] });
+  // const findCity = await props.info.data.find(
+  //   (item) => item.LocalizedName == correctName
+  // );
+  // console.log('tapdim', findCity);
+  // if (findCity) {
+  //   setCity(findCity);
+  // }
 
-const mapStateToProps=(state)=>({
-  info: state
-})
+  // const fetch1 = async() => {
+  //     try{
+  //     await fetch(API_2+city.Key+'?apikey='+API_Key)
+  //       .then(response => response.json())
+  //       .then(data => console.log(data));
+  //     }catch(error){
+  //         console.error('Error fetching data1:', error);
+  //     }
+  // };
+
+  const handleClick = (e) => {
+    console.log('clilkeyende', e.target.innerText);
+    const selected = e.target.innerText;
+    props.dispatch({ type: 'FINDING_CITY', payload: selected });
+    console.log(props.city);
+    setInputName(e.target.innerText);
+  };
+
+  return (
+    <div className="navbarContainer">
+      <div className="navbar">
+        <h3>Herolo Weather Task</h3>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/favourites">Favourites</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="formDiv">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            list="cities"
+            ref={inptValue}
+            onChange={handleChange}
+            name="searchInput"
+            value={inputName}
+            id="searchInput"
+          ></input>
+          <div id="cities" name="optiondata">
+            {inputName
+              ? props.info?.map((item) => {
+                  return (
+                    <p key={item.lon} onClick={handleClick}>
+                      {item.name}
+                    </p>
+                  );
+                })
+              : ''}
+          </div>
+        </form>
+      </div>
+
+      <div className="container">
+        <h1>Home</h1>
+        <div className="dataBox">
+          <h3>{city.name}</h3>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  info: state.data,
+  city: state.city,
+});
 export default connect(mapStateToProps)(Navbar);
