@@ -14,5 +14,5 @@ const details = [
 ]
 
 
-module.exports = details;
+export default  details;
 

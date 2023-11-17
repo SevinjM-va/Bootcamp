@@ -7,4 +7,4 @@ function mult (a,b){
   console.log(a * b)
 };
 
-modul.exports = {add, mult};
+export {add, mult};

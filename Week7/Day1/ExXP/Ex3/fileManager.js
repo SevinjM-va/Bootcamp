@@ -1,23 +1,21 @@
-const fs = require('fs');
+import fs from "fs";
 
-// fs.readFile ("Hello World.txt" ,"utf8",(err, data)=>{
-//   if(err){
-//     console.log(err)
-//   } else {
-//     console.log('Hello World')
-//   }
-// });
-// fs.writeFile('Bye World.txt', content,(err)=>{
-//   if(err){
-//     console.log(err)
-//   } else {
-//     console.log('File written')
-//   }
-// })
+function read (filepath){
+return fs.readFile (filepath,'utf-8',(err, data)=>{
+  if(err){
+    console.log(err)
+  } console.log(data)
+});
+}
 
-// !!! func icinde olub onu export etmelisen ki parameter qebul ede bilsin
-function readFile(filePath) {
-  return fs.readFileSync(filePath, 'utf8');
+function write(filepath){
+return fs.writeFile(filepath, 'Byeeee World!!',(err)=>{
+  if(err){
+    console.log(err)
+  } else {
+    console.log('File written')
+  }
+})
 }
 
 function writeFile(filePath, content) {
@@ -25,4 +23,6 @@ function writeFile(filePath, content) {
 }
 // !!!
 
-module.exports = { readFile, writeFile };
+export {
+  read, write
+}

@@ -4,15 +4,10 @@ import { readFile, writeFile } from './fileManager';
 
 // console.log(x);
 
-// writeFile('Bye World.txt', 'Writing to the file');
+import {read,write} from "./fileManager.js";
 
 // !!!
 
-const inputFilePath = 'input.txt';
-const outputFilePath = 'output.txt';
+read('./helloWorld.txt');
+write('byeWorld.txt');
 
-const content = fileManager.readFile(inputFilePath);
-fileManager.writeFile(outputFilePath, content);
-
-// !!
-// file path le islemelisen
