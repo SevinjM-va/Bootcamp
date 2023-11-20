@@ -53,7 +53,7 @@ const StarWars = (props) => {
   console.log("homeWName", homeWName);
   console.log("homeWPop", homeWPop);
 
-  let num = 0;
+  let num = 0; /* ??? */
   return (
     <div>
     <table>
@@ -79,7 +79,7 @@ const StarWars = (props) => {
     </table>
 
     <bar data={{
-      
+      /* ??? */
     }}>
     </bar>
     </div>

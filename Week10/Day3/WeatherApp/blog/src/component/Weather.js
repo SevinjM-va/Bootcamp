@@ -3,6 +3,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 
 const ApiKey = "6cd8b0375d15cc0a41fa544a2c84c80d";
+// !!! api keyleri .env faylinde saxla
 
 const Weather = (props) => {
   // console.log('props',props.info)
