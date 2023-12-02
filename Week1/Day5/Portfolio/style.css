@@ -140,6 +140,9 @@ left-nav{
   margin: 0;
   padding: 0 100px;
 }
+a{
+  margin: 15px;
+}
 .gettoknowme-myskills{
 
   display: flex;
