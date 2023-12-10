@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import BootstrapCard from './Bootstp';
+import BootstrapCard from './BootstrapCard';
+import { connect } from 'react-redux';
+import { useEffect } from 'react';
 
 
-const celebrities = [
+//Ex1 & Ex2
+
+function App(props) {
+
+  const celebrities = [
   {
       title: 'Bob Dylan',
       imageUrl: 'https://miro.medium.com/max/4800/1*_EDEWvWLREzlAvaQRfC_SQ.jpeg',
@@ -23,7 +28,15 @@ const celebrities = [
           'Sir James Paul McCartney CH MBE (born 18 June 1942) is an English singer, songwriter, musician, composer, and record and film producer who gained worldwide fame as co-lead vocalist and bassist for the Beatles.',
   },
 ]
-function App() {
+const planets = ['Mars','Venus','Jupiter','Earth','Saturn','Neptune' ];
+
+useEffect(()=>{
+  props.dispatch({type: 'DISPATCHING_DATA_CELEBRITIES', payload: celebrities})
+  props.dispatch({type: 'DISPATCHING_DATA_PLANETS', payload: planets})
+},[])
+ 
+  
+
   return (
     <div className="App">
       <BootstrapCard />
@@ -31,4 +44,7 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps =(state)=>({
+  info: state
+})
+export default connect(mapStateToProps)(App);
